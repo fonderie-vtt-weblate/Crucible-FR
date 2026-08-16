@@ -881,8 +881,10 @@
       "FavoriteActions": "Favorite Actions",
       "Knowledge": "Knowledge Areas",
       "KnowledgeHint": "Learn some Knowledge Areas from your Background or edit your Hero to gain some.",
+      "KnowledgeHintAdversary": "Use the configuration control to assign Knowledge Areas.",
       "Languages": "Known Languages",
       "LanguagesHint": "Learn some Languages from your Background or edit your Hero to gain some.",
+      "LanguagesHintAdversary": "Use the configuration control to assign Languages.",
       "OverCapacity": "Over Capacity"
     },
     "SECTIONS": {
@@ -1667,6 +1669,8 @@
     "Rank": "Hazard {danger}",
     "TooltipDamage": "{rank} vs. {defense} dealing {damage} damage to {resource}",
     "TooltipRestoration": "{rank} vs. {defense} restoring {resource}",
+    "TooltipTag": "{label}: {tooltip}",
+    "TooltipTags": "{tooltip} ({tags})",
     "UseHazard": "Use Hazard",
     "WindowTitle": "Hazard: {name}",
     "CONFIG": {
