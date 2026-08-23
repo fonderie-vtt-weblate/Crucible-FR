@@ -572,7 +572,6 @@
             "Exposed": "Exposé",
             "Fear": "Paniqué",
             "Flanked": "Débordé",
-            "FlankedDescription": "Vous êtes débordé par plusieurs ennemis qui gagnent des Faveurs supplémentaires à leurs attaques !",
             "Freezing": "Gelé",
             "Guarded": "Protégé",
             "Hastened": "Accéléré",
@@ -598,7 +597,8 @@
             "Unaware": "Distrait",
             "Weakened": "Affaibli",
             "Falling": "En chute",
-            "Flying": "En vol"
+            "Flying": "En vol",
+            "Overrun": "Submergé"
         },
         "DURATION": {
             "Combat": "Combat",
@@ -830,7 +830,9 @@
             "KnowledgeHint": "Apprenez certains domaines de connaissances à partir de votre Origine ou modifiez votre Héros pour en acquérir.",
             "Languages": "Langues connues",
             "LanguagesHint": "Apprenez des Langages à partir de votre Origine ou modifiez votre Héros pour en acquérir.",
-            "OverCapacity": "Dépassement de capacité"
+            "OverCapacity": "Dépassement de capacité",
+            "KnowledgeHintAdversary": "Utilisez la configuration pour affecter des Domaines de connaissance.",
+            "LanguagesHintAdversary": "Utilisez la configuration pour affecter des Langues."
         },
         "SECTIONS": {
             "ACCESSORY": {
@@ -1583,19 +1585,6 @@
         "UnknownScore": "???",
         "ReplayAnimation": "Rejouer l'animation"
     },
-    "FLANKED_EFFECT": {
-        "FIELDS": {
-            "allies": {
-                "label": "Alliés engagés"
-            },
-            "enemies": {
-                "label": "Ennemis engagés"
-            },
-            "flanked": {
-                "label": "Palier de Débordement"
-            }
-        }
-    },
     "HOOKS": {
         "NoModuleHooks": "Aucun hook de module n'est enregistré pour cet identifiant.",
         "ToggleSource": "Basculer la Source",
@@ -1634,7 +1623,9 @@
         "Parenthetical": "{label} ({tags})",
         "Rank": "Péril {danger}",
         "TooltipDamage": "{rank} contre {defense} infligeant {damage} points de dégâts à : {resource}",
-        "TooltipRestoration": "{rank} contre {defense} restaurant la ressource : {resource}"
+        "TooltipRestoration": "{rank} contre {defense} restaurant la ressource : {resource}",
+        "TooltipTag": "{label} : {tooltip}",
+        "TooltipTags": "{tooltip} ({tags})"
     },
     "ITEM": {
         "ACTIONS": {
@@ -2107,8 +2098,8 @@
         "SpecializationPathSelect": "Sélectionnez une spécialisation",
         "SpecializationPathSpecific": "Parcours de spécialisation : {path}",
         "Summary": "Résumé des Compétences",
-        "TooltipCheck": "[({a1} + {a2}) / 4] + Bonus de Compétence + Bonus d'Enchantement",
-        "TooltipPassive": "12 + Score",
+        "TooltipCheck": "[({v1} {a1} + {v2} {a2}) / 4] {skill} {rank} {enchantment} Enchantement",
+        "TooltipPassive": "12 + {score}",
         "UnacquiredRanks": "Rangs non acquis"
     },
     "SPELL": {
@@ -2506,7 +2497,9 @@
         "LABELS": {
             "Enemies": "{enemies} Ennemis",
             "Engagement": "Engagement {engagement}",
-            "Flanked": "Débordé {flanked}"
+            "Flanked": "Débordé {flanked}",
+            "Allies": "{allies} Alliés",
+            "Attackers": "{attackers} Attaquants"
         },
         "MOVEMENT": {
             "ACTIONS": {
@@ -2589,8 +2582,7 @@
     },
     "TYPES": {
         "ActiveEffect": {
-            "affix": "Affixe",
-            "flanked": "Débordé"
+            "affix": "Affixe"
         },
         "Actor": {
             "adversary": "Adversaire",

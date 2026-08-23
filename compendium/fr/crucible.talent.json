@@ -245,7 +245,7 @@
         },
         "berserker0000000": {
             "name": "Berserker",
-            "description": "<p>Vous vous délectez du frisson du combat, vous jetant dans la mêlée avec un abandon total.</p>",
+            "description": "<p>Vous vous délectez du frisson du combat, vous jetant dans la mêlée avec un abandon total.</p><p>Tant que vous êtes @Condition[enraged], vous pouvez dépenser du <strong>Focus</strong> pour toute action qui n'est pas un sort.</p>",
             "actions": {
                 "berserkerRage": {
                     "name": "Rage de Berserker",
@@ -417,7 +417,7 @@
         },
         "counterspell0000": {
             "name": "Contresort",
-            "description": "<p>Vous réagissez immédiatement à un sort en train d'être lancé et composez une rune et un signe conçus pour démêler et nier la sorcellerie d'un mage ennemi.</p><h2 class=\"divider\">Notes de test</h2><p>Cette action peut maintenant être utilisée en playtest, mais n'est pas encore <em>entièrement automatisée</em>. Le Contresort peut être effectué, mais il revient au Maître du jeu d'annuler manuellement un sort précédemment appliqué et de déduire manuellement son coût en <strong>Action</strong> et <strong>Focus</strong>. Ces étapes du processus global de Contresort <em>seront automatisées</em> dans une prochaine mise à jour, de sorte qu'un Contresort confirmé confirmera également le sort qui a été contré, mais sans ses effets.</p>",
+            "description": "<p>Vous réagissez immédiatement à un sort en train d'être lancé et composez une rune et un signe conçus pour démêler et nier la sorcellerie d'un mage ennemi.</p>",
             "actions": {
                 "counterspell": {
                     "name": "Contresort",
@@ -638,7 +638,7 @@
         },
         "eyeofthestorm000": {
             "name": "Œil du cyclone",
-            "description": "<p>Après avoir Retardé votre Tour, gagnez +2 Faveurs sur toute Frappe ou Attaque magique contre un ennemi que vous avez laissé agir avant vous ce Round.</p><p>TODO : Nécessite une automatisation. Pour l'instant, appliquez les faveurs manuellement.</p>"
+            "description": "<p>Après avoir Retardé votre Tour, gagnez +2 Faveurs sur toute Frappe ou Attaque magique contre un ennemi que vous avez laissé agir avant vous ce Round.</p>"
         },
         "fanofarrows00000": {
             "name": "Déluge de flèches",
@@ -2124,7 +2124,7 @@
         },
         "duelist000000000": {
             "name": "Duelliste",
-            "description": "<p>Vous savourez le frisson et la maîtrise technique du combat singulier, employant un style de combat qui utilise une arme à une main tout en gardant votre main secondaire libre.</p><p>Tant que vous maniez une arme de mêlée à une main et que votre autre main est vide, vous obtenez un bonus de <strong>+2</strong> à votre défense de <strong>Parade</strong> tant que vous n'êtes pas @Condition[flanked]. Tant que vous remplissez ces critères, toute attaque qui se solde par un <strong>Coup superficiel</strong> contre votre <strong>Armure</strong> devient à la place une <strong>Parade</strong>.</p>",
+            "description": "<p>Vous savourez le frisson et la maîtrise technique du combat singulier, employant un style de combat qui utilise une arme à une main tout en gardant votre main secondaire libre.</p><p>Tant que vous maniez une arme de mêlée à une main et que votre autre main est vide, vous obtenez un bonus de <strong>+2</strong> à votre défense de <strong>Parade</strong>. Tant que vous remplissez ces critères, toute attaque qui se solde par un <strong>Coup superficiel</strong> contre votre <strong>Armure</strong> devient à la place une <strong>Parade</strong>. Vous ne bénéficiez d'aucun avantage contre un adversaire qui vous a @Condition[flanked].</p>",
             "actions": {
                 "estocade": {
                     "name": "Estocade",

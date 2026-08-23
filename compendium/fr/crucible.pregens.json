@@ -1563,7 +1563,7 @@
                 },
                 "counterspell0000": {
                     "name": "Contresort",
-                    "description": "<p>Vous réagissez immédiatement à un sort en train d'être lancé et composez une rune et un signe conçus pour démêler et nier la sorcellerie d'un mage ennemi.</p><h2 class=\"divider\">Notes de test</h2><p>Cette action peut maintenant être utilisée en playtest, mais n'est pas encore <em>entièrement automatisée</em>. Le Contresort peut être effectué, mais il revient au Maître du jeu d'annuler manuellement un sort précédemment appliqué et de déduire manuellement son coût en <strong>Action</strong> et <strong>Focus</strong>. Ces étapes du processus global de Contresort <em>seront automatisées</em> dans une prochaine mise à jour, de sorte qu'un Contresort confirmé confirmera également le sort qui a été contré, mais sans ses effets.</p>",
+                    "description": "<p>Vous réagissez immédiatement à un sort en train d'être lancé et composez une rune et un signe conçus pour démêler et nier la sorcellerie d'un mage ennemi.</p>",
                     "actions": {
                         "counterspell": {
                             "name": "Contresort",
@@ -1991,7 +1991,7 @@
                 },
                 "counterspell0000": {
                     "name": "Contresort",
-                    "description": "<p>Vous réagissez immédiatement à un sort en train d'être lancé et composez une rune et un signe conçus pour démêler et nier la sorcellerie d'un mage ennemi.</p><h2 class=\"divider\">Notes de test</h2><p>Cette action peut maintenant être utilisée en playtest, mais n'est pas encore <em>entièrement automatisée</em>. Le Contresort peut être effectué, mais il revient au Maître du jeu d'annuler manuellement un sort précédemment appliqué et de déduire manuellement son coût en <strong>Action</strong> et <strong>Focus</strong>. Ces étapes du processus global de Contresort <em>seront automatisées</em> dans une prochaine mise à jour, de sorte qu'un Contresort confirmé confirmera également le sort qui a été contré, mais sans ses effets.</p>",
+                    "description": "<p>Vous réagissez immédiatement à un sort en train d'être lancé et composez une rune et un signe conçus pour démêler et nier la sorcellerie d'un mage ennemi.</p>",
                     "actions": {
                         "counterspell": {
                             "name": "Contresort",
