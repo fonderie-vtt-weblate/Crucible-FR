@@ -60,7 +60,7 @@
         "alchemistsToolki": {
             "name": "Kit d'alchimiste",
             "description": {
-                "public": "<p>Une boîte en bois recouverte de cuir contenant un mortier et un pilon en pierre, des emplacements pour ranger plusieurs fioles à bouchon, une cuillère en bois, ainsi qu'un petit cadre en fer pliable et une petite casserole en laiton pour mélanger les ingrédients au-dessus d'un feu.</p>"
+                "public": "<p>Une boîte en bois recouverte de cuir contenant un mortier et un pilon en pierre, une cuillère en bois, ainsi qu'un petit support en fer pliable et un récipient en laiton pour mélanger les ingrédients au-dessus d'un feu.</p><p>Sa véritable valeur réside dans ce qui en occupe le reste : des flacons bouchés contenant des liquides limpides ou troubles, des papillotes de papier renfermant des poudres, des sachets de gros sel, un bout de craie, un bocal scellé dont émane une légère odeur d'éclair. Chaque élément est rangé à sa place, étiqueté d'une écriture que seul son propriétaire peut déchiffrer.</p><p>Transporter ce kit dans votre Ceinture porte-outils vous permet d'avoir ces réactifs à portée de main plutôt qu'au fond d'un sac ; c'est toute la différence entre connaître la réponse et être capable de la mettre en pratique.</p>"
             }
         },
         "amulet0000000000": {
@@ -74,7 +74,7 @@
             "name": "Amulette d'agilité",
             "description": {
                 "public": "<blockquote><p>Ce collier aux couleurs vives renferme une amulette en pierre qui brille d'une rune crépitant légèrement sous l'effet d'une résonance électrique. En le tenant, vous avez la sensation surréaliste que le monde autour de vous ralentit imperceptiblement.</p></blockquote><p>Cette amulette enchantée offre un bonus à la défense de <strong>Réflexe</strong> </p>",
-                "private": "<p>Cet objet est présenté à titre d'exemple comme une Amulette raffinée avec le suffixe @UUID[Compendium.crucible.affixes.ActiveEffect.nimbleness000000]{Agilité}.</p><p>Cet affixe peut être appliqué à n'importe quelle armure ou accessoire et cette amulette pourrait être encore enchantée avec un préfixe de Palier 1.</p>"
+                "private": "<p>Cet objet est présenté à titre d'exemple comme un bijou <strong>Raffiné</strong> avec le suffixe @UUID[Compendium.crucible.affixes.ActiveEffect.nimbleness000000]{Agilité}.</p><p>Cet affixe peut être appliqué à n'importe quelle armure ou accessoire et cette amulette pourrait être encore enchantée avec un <strong>Préfixe de Palier 1</strong>.</p>"
             },
             "effects": {
                 "nimbleness000000": {
@@ -140,7 +140,7 @@
             }
         },
         "bracer0000000000": {
-            "name": "Bracelet",
+            "name": "Protège-bras",
             "description": {
                 "public": "<p>Un bracelet en cuir robuste qui protège l'avant-bras.</p>",
                 "private": "<p>Il s'agit d'un modèle d'accessoire de base destiné à être amélioré en qualité et enchanté avec des affixes.</p>"
@@ -209,7 +209,7 @@
             "name": "Charme de ténacité",
             "description": {
                 "public": "<blockquote><p>Ce collier orné de breloques a un aspect rustique, mais en y regardant de plus près, vous découvrez un travail artisanal délicat. En le tenant, vous sentez votre respiration s'approfondir et les légères douleurs musculaires s'estomper.</p></blockquote><p>Ce charme enchanté offre un bonus à la défense de <strong>Fortitude</strong></p>",
-                "private": "<p>Cet objet est présenté à titre d'exemple comme un Charme raffiné avec le suffixe @UUID[Compendium.crucible.affixes.ActiveEffect.tenacity00000000]{Ténacité}.</p><p>cet affixe peut être appliqué sur n'importe quelle armure ou accessoire et ce charme pourrait être encore enchanté avec un préfixe de Palier 1.</p>"
+                "private": "<p>Cet objet est présenté à titre d'exemple comme un bijou <strong>Raffiné</strong> avec le suffixe @UUID[Compendium.crucible.affixes.ActiveEffect.tenacity00000000]{Ténacité}.</p><p>Cet affixe peut être appliqué sur n'importe quelle armure ou accessoire et ce charme pourrait être encore enchanté avec un <strong>Préfixe de Palier 1</strong>.</p>"
             },
             "effects": {
                 "tenacity00000000": {
@@ -406,7 +406,7 @@
             }
         },
         "fletchersToolkit": {
-            "name": "Kit de Flechier",
+            "name": "Kit de flechier",
             "description": {
                 "public": "<p>Un carquois en cuir à extrémité refermable, contenant un étau à monter, un rabot à rayons, des brosses et un petit dévidoir pour enrouler de la corde tressée. Déplié, il se transforme en tapis pouvant servir de plan de travail.</p>"
             }
@@ -415,7 +415,7 @@
             "name": "Perle de focalisation",
             "description": {
                 "public": "<blockquote><p>Une petite perle d'un bleu éclatant, agréablement fraîche au toucher quelle que soit la température ambiante.</p></blockquote><p>Cette perle enchantée offre à son porteur l'action <strong>Restauration de focus</strong>, constituant une réserve supplémentaire de <strong>Focus</strong> qui peut être utilisée dans les moments difficiles.</p>",
-                "private": "<p>Cet objet est présenté à tire d'exemple comme une Perle raffinée avec le préfixe @UUID[Compendium.crucible.affixes.ActiveEffect.focusing00000000]{Focalisation}.</p><p>Cet affixe peut être appliqué à n'importe quel accessoire et cette perle pourrait être encore enchantée avec un suffixe de Palier 1.</p>"
+                "private": "<p>Cet objet est présenté à tire d'exemple comme une babiole <strong>Raffinée</strong> avec le préfixe @UUID[Compendium.crucible.affixes.ActiveEffect.focusing00000000]{Focalisation}.</p><p>Cet affixe peut être appliqué à n'importe quel accessoire et cette perle pourrait être encore enchantée avec un <strong>Suffixe de Palier 1</strong>.</p>"
             },
             "effects": {
                 "focusing00000000": {
@@ -425,7 +425,7 @@
                     "actions": {
                         "affixFocusing": {
                             "name": "Restauration de focus",
-                            "description": "<p>En cas de difficulté, vous pouvez puiser dans une réserve supplémentaire de <strong>Focus</strong> depuis cet objet. Le montant de Focus restauré dépend du <strong>Palier</strong> de ce préfixe.</p><ul><li><p><strong>Palier 1 :</strong> <strong>4 Focus</strong></p></li><li><p><strong>Palier 2 :</strong> <strong>6 Focus</strong></p></li><li><p><strong>Palier 3 :</strong> <strong>8 Focus</strong></p></li></ul>"
+                            "description": "<p>En cas de difficulté, vous pouvez puiser dans une réserve supplémentaire de <strong>Focus</strong> depuis cet objet. Le montant de <strong>Focus</strong> restauré dépend du <strong>Palier</strong> de ce préfixe.</p><ul><li><p><strong>Palier 1 :</strong> <strong>4 Focus</strong></p></li><li><p><strong>Palier 2 :</strong> <strong>6 Focus</strong></p></li><li><p><strong>Palier 3 :</strong> <strong>8 Focus</strong></p></li></ul>"
                         }
                     }
                 }
@@ -465,7 +465,7 @@
             "name": "Gemme d'illumination",
             "description": {
                 "public": "<blockquote><p>Cette pierre précieuse soigneusement taillée brille d'une douce lumière chaude et est agréable au toucher.</p></blockquote><p>Cette gemme enchantée confère au porteur l'action <strong>Activer l'illumination</strong>, projetant une lumière surnaturelle dans un large rayon jusqu'à son interruption.</p>",
-                "private": "<p>Cet objet est présenté à titre d'exemple comme une Gemme raffinée avec le préfixe@UUID[Compendium.crucible.affixes.ActiveEffect.luminous00000000]{Lumineux}.</p><p>Cet affixe peut être appliqué à n'importe quel accessoire et cette gemme pourrait être encore enchantée avec un suffixe de Palier 1.</p>"
+                "private": "<p>Cet objet est présenté à titre d'exemple comme une babiole <strong>Raffinée</strong> avec le préfixe@UUID[Compendium.crucible.affixes.ActiveEffect.luminous00000000]{Lumineux}.</p><p>Cet affixe peut être appliqué à n'importe quel accessoire et cette gemme pourrait être encore enchantée avec un <strong>Suffixe de Palier 1</strong>.</p>"
             },
             "effects": {
                 "luminous00000000": {
@@ -620,7 +620,7 @@
             "actions": {
                 "healingTonic": {
                     "name": "Stimulant de santé",
-                    "description": "<p>Recouvrez immédiatement, et au début de chacun des 5 prochains <strong>Rounds</strong>, un montant de <strong>Santé</strong> dépendant de la qualité du stimulant.</p><ul><li><p><strong>Bâclée</strong> - Soigne 2 points de <strong>Santé</strong> à chaque Round</p></li><li><p><strong>Commune</strong> - Soigne 4 points de <strong>Santé</strong> à chaque Round</p></li><li><p><strong>Raffinée</strong> - Soigne 8 points de <strong>Santé</strong> à chaque Round</p></li><li><p><strong>Supérieure</strong> - Soigne 16 points de <strong>Santé</strong> à chaque Round</p></li><li><p><strong>Chef-d’œuvre</strong> - Soigne 32 points de <strong>Santé</strong> à chaque Round</p></li></ul>",
+                    "description": "<p>Recouvrez immédiatement, et au début de chacun des 5 prochains <strong>Rounds</strong>, un montant de <strong>Santé</strong> dépendant de la qualité du stimulant.</p><ul><li><p><strong>Bâclée</strong> - Soigne 2 points de <strong>Santé</strong> à chaque <strong>Round</strong></p></li><li><p><strong>Commune</strong> - Soigne 4 points de <strong>Santé</strong> à chaque <strong>Round</strong></p></li><li><p><strong>Raffinée</strong> - Soigne 8 points de <strong>Santé</strong> à chaque <strong>Round</strong></p></li><li><p><strong>Supérieure</strong> - Soigne 16 points de <strong>Santé</strong> à chaque <strong>Round</strong></p></li><li><p><strong>Chef-d’œuvre</strong> - Soigne 32 points de <strong>Santé</strong> à chaque <strong>Round</strong></p></li></ul>",
                     "effects": {
                         "Healing Tonic": {
                             "name": "Stimulant de santé"
@@ -778,8 +778,8 @@
         "luminaryBand0000": {
             "name": "Anneau luminaire",
             "description": {
-                "public": "<blockquote><p>Un anneau d’or finement gravé, serti d’une gemme ovale orange aux reflets scintillants.</p></blockquote><p>Cet anneau enchanté offre des faveurs aux actions <strong>Composées</strong> qui incluent une <strong>Inflexion</strong>.</p>",
-                "private": "<p>Cet objet est présenté à titre d'exemple comme un Anneau raffiné avec le préfixe @UUID[Compendium.crucible.affixes.ActiveEffect.luminary00000000]{Astral}.</p><p>Cet affixe peut être appliqué à n'importe quel accessoire et cet anneau pourrait être encore enchanté avec un suffixe de Palier 1.</p>"
+                "public": "<blockquote><p>Un anneau d’or finement gravé, serti d’une gemme ovale orange aux reflets scintillants.</p></blockquote><p>Cet anneau enchanté offre des faveurs aux actions @Rule[action.composed] qui incluent une <strong>Inflexion</strong>.</p>",
+                "private": "<p>Cet objet est présenté à titre d'exemple comme un bijou <strong>Raffiné</strong> avec le préfixe @UUID[Compendium.crucible.affixes.ActiveEffect.luminary00000000]{Astral}.</p><p>Cet affixe peut être appliqué à n'importe quel accessoire et cet anneau pourrait être encore enchanté avec un <strong>Suffixe de Palier 1</strong>.</p>"
             },
             "effects": {
                 "luminary00000000": {
@@ -890,7 +890,7 @@
             "name": "Périapte de détermination",
             "description": {
                 "public": "<blockquote><p>Une élégante amulette en argent sertie de pierres précieuses bleues vous insuffle un sentiment de constance tandis que vous la serrez contre vous, prêt à affronter tous les défis.</p></blockquote><p>Ce périapte procure un bonus à la défense de <strong>Volonté</strong>.</p>",
-                "private": "<p>Cet objet est présenté à titre d'exemple comme un Périapte raffiné avec le suffixe @UUID[Compendium.crucible.affixes.ActiveEffect.determination000]{Détermination}.</p><p>Cet affixe peut être appliqué à n'importe quelle armure ou accessoire et ce périapte pourrait être encore enchanté avec un préfixe de Palier 1.</p>"
+                "private": "<p>Cet objet est présenté à titre d'exemple comme un bijou <strong>Raffiné</strong> avec le suffixe @UUID[Compendium.crucible.affixes.ActiveEffect.determination000]{Détermination}.</p><p>Cet affixe peut être appliqué à n'importe quelle armure ou accessoire et ce périapte pourrait être encore enchanté avec un <strong>Préfixe de Palier 1</strong>.</p>"
             },
             "effects": {
                 "determination000": {
@@ -977,7 +977,7 @@
             "actions": {
                 "rallyingTonic": {
                     "name": "Stimulant de ralliement",
-                    "description": "<p>Recouvrez immédiatement, et au début de chacun des 5 prochains <strong>Rounds</strong>, un montant de <strong>Moral</strong> dépendant de la qualité du stimulant.</p><ul><li><p><strong>Bâclée</strong> - Soigne 2 points de <strong>Moral</strong> à chaque Round</p></li><li><p><strong>Commune</strong> - Soigne 4 points de <strong>Moral</strong> à chaque Round</p></li><li><p><strong>Raffinée</strong>- Soigne 8 points de <strong>Moral</strong> à chaque Round</p></li><li><p><strong>Supérieure</strong> - Soigne 16 points de <strong>Moral</strong> à chaque Round</p></li><li><p><strong>Chef-d’œuvre</strong> - Soigne 32 points de <strong>Moral</strong> à chaque Round</p></li></ul>",
+                    "description": "<p>Recouvrez immédiatement, et au début de chacun des 5 prochains <strong>Rounds</strong>, un montant de <strong>Moral</strong> dépendant de la qualité du stimulant.</p><ul><li><p><strong>Bâclée</strong> - Soigne 2 points de <strong>Moral</strong> à chaque <strong>Round</strong></p></li><li><p><strong>Commune</strong> - Soigne 4 points de <strong>Moral</strong> à chaque <strong>Round</strong></p></li><li><p><strong>Raffinée</strong>- Soigne 8 points de <strong>Moral</strong> à chaque <strong>Round</strong></p></li><li><p><strong>Supérieure</strong> - Soigne 16 points de <strong>Moral</strong> à chaque <strong>Round</strong></p></li><li><p><strong>Chef-d’œuvre</strong> - Soigne 32 points de <strong>Moral</strong> à chaque <strong>Round</strong></p></li></ul>",
                     "effects": {
                         "Rallying Tonic": {
                             "name": "Stimulant de ralliement"
@@ -1004,18 +1004,6 @@
                 "public": "<p>Une lame particulièrement tranchante utilisée pour le rasage ou, dans certains cas, pour la chirurgie.</p>"
             }
         },
-        "repairKitSmith00": {
-            "name": "Kit de réparation (forge)",
-            "description": {
-                "public": "<p>Un sac en cuir contenant des pierres à aiguiser et une meuleuse, un petit marteau, un petit creuset pour liquéfier le métal et un assortiment de petits morceaux de ferraille. Peut servir à réparer les armures, les armes et les accessoires métalliques.</p>"
-            }
-        },
-        "repairKitTailor0": {
-            "name": "Kit de réparation (couture)",
-            "description": {
-                "public": "<p>Un sac en cuir contenant des ciseaux, des aiguilles, un métier à tisser et un assortiment de petits morceaux de tissu, de cuir, de fil et de ficelle. Peut servir à réparer les armures et accessoires en tissu et en cuir.</p>"
-            }
-        },
         "ring000000000000": {
             "name": "Anneau",
             "description": {
@@ -1033,7 +1021,7 @@
             "name": "Anneau d'évasion",
             "description": {
                 "public": "<blockquote><p>Cette élégante bague ornée est légèrement glissante et difficile à prendre en main. Lorsqu'on la tient, elle vibre de façon presque imperceptible.</p></blockquote><p>Cet anneau enchanté procure un bonus à la défense d'<strong>Esquive</strong>.</p>",
-                "private": "<p>Cet objet est présenté à titre d'exemple comme un Anneau raffiné avec le suffixe @UUID[Compendium.crucible.affixes.ActiveEffect.evasion000000000]{Dérobade}.</p><p>Cet affixe peut être appliqué à n'importe quelle armure ou accessoire et cet anneau pourrait être encore enchanté avec un préfixe de Palier 1.</p>"
+                "private": "<p>Cet objet est présenté à titre d'exemple comme un bijou <strong>Raffiné</strong> avec le suffixe @UUID[Compendium.crucible.affixes.ActiveEffect.evasion000000000]{Dérobade}.</p><p>Cet affixe peut être appliqué à n'importe quelle armure ou accessoire et cet anneau pourrait être encore enchanté avec un <strong>Préfixe de Palier 1</strong>.</p>"
             },
             "effects": {
                 "evasion000000000": {
@@ -1047,7 +1035,7 @@
             "name": "Anneau de chute lente",
             "description": {
                 "public": "<blockquote><p>Une bague élégante en acier bleu pâle, ornée d'un motif en spirale qui donne l'illusion d'une rotation lente et perpétuelle au doigt de celui ou celle qui la porte.</p></blockquote><p>Cette bague enchantée procure la capacité de planer latéralement lors d'une chute.</p>",
-                "private": "<p>Cet objet est présenté à titre d'exemple comme un Anneau raffiné avec le préfixe @UUID[Compendium.crucible.affixes.ActiveEffect.gliding000000000]{Planeur}.</p><p>Cet affixe peut être appliqué à n'importe quel accessoire et cet anneau pourrait être encore enchanté avec un suffixe de Palier 1.</p>"
+                "private": "<p>Cet objet est présenté à titre d'exemple comme un bijou <strong>Raffiné</strong> avec le préfixe @UUID[Compendium.crucible.affixes.ActiveEffect.gliding000000000]{Planeur}.</p><p>Cet affixe peut être appliqué à n'importe quel accessoire et cet anneau pourrait être encore enchanté avec un <strong>Suffixe de Palier 1</strong>.</p>"
             },
             "effects": {
                 "gliding000000000": {
@@ -1164,7 +1152,7 @@
         "smithsToolkit000": {
             "name": "Kit de forgeron",
             "description": {
-                "public": "<p>Une trousse en bois recouverte de cuir. Elle contient des poinçons, des pinces, de la ferraille et une petite enclume, ainsi qu'un espace pour ranger des morceaux de ferraille.</p>"
+                "public": "<p>Une trousse en bois recouverte de cuir contenant des poinçons, des pinces, un petit marteau, des pierres à aiguiser et une meule, ainsi qu'une petite enclume, avec un espace réservé au stockage de chutes de métal.</p>"
             }
         },
         "soap000000000000": {
@@ -1183,7 +1171,7 @@
             "name": "Bague de stockage",
             "description": {
                 "public": "<blockquote><p>Cette bague est composée d'une pierre opaque soigneusement sculptée en couches gracieuses et fluides, évoquant une esthétique ancienne. L'anneau sert de puissant focalisateur de sorts pour le porteur <strong>Investi</strong>.</p></blockquote><p>Cette bague enchantée procure la capacité de puiser dans une réserve supplémentaire de <strong>Focus</strong> dans les moment difficiles.</p>",
-                "private": "<p>Cet objet est présenté à titre d'exemple comme un Anneau raffiné avec le préfixe @UUID[Compendium.crucible.affixes.ActiveEffect.focusing00000000]{Focus de réserve}.</p><p>Cet affixe peut être appliqué à n'importe quel accessoire et cet anneau pourrait être encore enchanté avec un suffixe de Palier 1.</p>"
+                "private": "<p>Cet objet est présenté à titre d'exemple comme un bijou <strong>Raffiné</strong> avec le préfixe @UUID[Compendium.crucible.affixes.ActiveEffect.focusing00000000]{Focalisation}.</p><p>Cet affixe peut être appliqué à n'importe quel accessoire et cet anneau pourrait être encore enchanté avec un <strong>Suffixe de Palier 1</strong>.</p>"
             },
             "effects": {
                 "focusing00000000": {
@@ -1193,7 +1181,7 @@
                     "actions": {
                         "affixFocusing": {
                             "name": "Restauration de focus",
-                            "description": "<p>En cas de difficulté, vous pouvez puiser dans une réserve supplémentaire de <strong>Focus</strong> depuis cet objet. Le montant de Focus restauré dépend du <strong>Palier</strong> de ce préfixe.</p><ul><li><p><strong>Palier 1 :</strong> <strong>4 Focus</strong></p></li><li><p><strong>Palier 2 :</strong> <strong>6 Focus</strong></p></li><li><p><strong>Palier 3 :</strong> <strong>8 Focus</strong></p></li></ul>"
+                            "description": "<p>En cas de difficulté, vous pouvez puiser dans une réserve supplémentaire de <strong>Focus</strong> depuis cet objet. Le montant de <strong>Focus</strong> restauré dépend du <strong>Palier</strong> de ce préfixe.</p><ul><li><p><strong>Palier 1 :</strong> <strong>4 Focus</strong></p></li><li><p><strong>Palier 2 :</strong> <strong>6 Focus</strong></p></li><li><p><strong>Palier 3 :</strong> <strong>8 Focus</strong></p></li></ul>"
                         }
                     }
                 }
@@ -1316,7 +1304,7 @@
         "tailorsToolkit00": {
             "name": "Kit de couturier",
             "description": {
-                "public": "<p>Une trousse en bois recouverte de cuir contenant des bobines de fil, des aiguilles et des épingles adaptées, un couteau à dépecer, des poinçons, convenant au travail du tissu et du cuir.</p>"
+                "public": "<p>Une trousse en bois recouverte de cuir contenant des bobines de fil, des aiguilles et des épingles, des ciseaux, un couteau à dépecer, et des poinçons, avec un espace réservé aux chutes de tissu et de cuir.</p>"
             }
         },
         "tentCaravan00000": {
@@ -1363,7 +1351,7 @@
         "travelJug0000000": {
             "name": "Pichet de voyage",
             "description": {
-                "public": "<p>Cruche en terre cuite avec bouchon, gainée de cuir, pouvant être fixée à une ceinture ou à l'extérieur d'un sac à dos pour plus de praticité. Contenance : 40 once de liquide.</p>"
+                "public": "<p>Cruche en terre cuite avec bouchon, gainée de cuir, pouvant être fixée à une ceinture ou à l'extérieur d'un sac à dos pour plus de praticité. Contenance : 40 once de liquide (1 L).</p>"
             }
         },
         "warHammer0000000": {
@@ -1387,7 +1375,7 @@
         "wetskin000000000": {
             "name": "Outre",
             "description": {
-                "public": "<p>Poche à eau gainée de cuir, fixable à la ceinture ou à l'extérieur d'un sac à dos pour plus de praticité. Contenance : 26 onces de liquide.</p>"
+                "public": "<p>Poche à eau gainée de cuir, fixable à la ceinture ou à l'extérieur d'un sac à dos pour plus de praticité. Contenance : 26 onces de liquide (75 cl).</p>"
             }
         },
         "whistle000000000": {

@@ -16,7 +16,15 @@
         "Toughness": "Robustesse",
         "ToughnessAbbr": "Rob",
         "Wisdom": "Sagesse",
-        "WisdomAbbr": "Sag"
+        "WisdomAbbr": "Sag",
+        "TOOLTIPS": {
+            "Dexterity": "<p>La Dextérité est un attribut de rapidité physique qui reflète l'agilité et la précision des mouvements. La Dextérité affecte l'<strong>Initiative</strong>, la composante <strong>Esquive</strong> de la Défense physique, la défense de <strong>Réflexe</strong>, et l'utilisation des armes basées sur la Dextérité.</p>",
+            "Intellect": "<p>L'intellect est un attribut de vivacité d'esprit qui reflète la rapidité de la pensée et la détermination dans l'action. L'Intellect affecte l'<strong>Initiative</strong>, la défense de <strong>Réflexe</strong>, et la taille de la réserve de <strong>Focus</strong>.</p>",
+            "Presence": "<p>La Présence est un attribut de résilience mentale qui décrit la force de personnalité, la détermination et la confiance en soi d'une créature. La Présence affecte la défense de <strong>Volonté</strong> et la taille de la réserve de <strong>Focus</strong>. Chaque point de Présence augmente la base de <strong>Moral</strong> de 4.</p>",
+            "Strength": "<p>La Force est une caractéristique de puissance physique qui décrit la vigueur, la robustesse et la puissance d'une créature. La Force affecte la défense de <strong>Fortitude</strong>, la <strong>Capacité</strong> de charge, et l'utilisation des armes basées sur la Force. Chaque point de Force augmente la base de <strong>Santé</strong> de 2.</p>",
+            "Toughness": "<p>La Robustesse est un attribut de résilience physique qui désigne la vigueur et la ténacité. La Robustesse affecte la défense de <strong>Fortitude</strong>. Chaque point de Robustesse augmente la base de <strong>Santé</strong> de 4.</p>",
+            "Wisdom": "<p>La Sagesse est une caractéristique de puissance mentale qui décrit la force de conviction, l'étendue des connaissances et la patience d'une créature. La Sagesse affecte la défense de <strong>Volonté</strong> et la taille de la réserve de <strong>Focus</strong>. Chaque point de Sagesse augmente la base de <strong>Moral</strong> de 2.</p>"
+        }
     },
     "ACCESSORY": {
         "CATEGORIES": {
@@ -31,7 +39,11 @@
             "AddFavorite": "Ajouter un favori",
             "Delete": "Supprimer l'Action : {name}",
             "DeleteConfirm": "Êtes-vous certain de vouloir supprimer l'action <strong>{name}</strong> de l'objet <strong>{parent}</strong> de type {type} ?",
-            "RemoveFavorite": "Retirer un favori"
+            "RemoveFavorite": "Retirer un favori",
+            "CreateRegionBehavior": "Créer un comportement de région",
+            "DeleteRegionBehavior": "Supprimer le comportement de région",
+            "DeleteRegionBehaviorConfirm": "Êtes-vous sûr de vouloir supprimer ce comportement de région d'<strong>{action}</strong> ?",
+            "EditRegionBehavior": "Éditer le comportement de région"
         },
         "DEFAULT_ACTIONS": {
             "Cast": {
@@ -59,7 +71,7 @@
                 "Name": "Frappe réactive"
             },
             "Recover": {
-                "Description": "Consacrez 10 minutes hors-combat à récupérer de l'effort afin de rétablir pleinement vos scores de Santé, Moral, Action et Focus.",
+                "Description": "Consacrez 10 minutes hors-combat à récupérer de l'effort afin de rétablir pleinement vos scores de <strong>Santé</strong>, <strong>Moral</strong>, <strong>Action</strong>, et <strong>Focus</strong>. Tout <strong>Héroïsme</strong> existant est supprimé et les effets temporaires à durée courte se terminent. La Récupération ne réduit pas les <strong>Lésions</strong> ou la <strong>Folie</strong>.",
                 "Name": "Récupération"
             },
             "Reload": {
@@ -67,7 +79,7 @@
                 "Name": "Rechargement d'arme"
             },
             "Rest": {
-                "Description": "Consacrez dix heures à un repos complet, incluant le temps de manger, de dormir, de soigner vos blessures et de récupérer vos ressources.",
+                "Description": "Consacrez dix heures à un repos complet, incluant le temps de manger, de dormir, de soigner vos blessures et de récupérer vos ressources. Cela apporte tous les bénéfices d'une <strong>Récupération</strong>, et les Héros réduisent leurs <strong>Lésions</strong> et <strong>Folie</strong> de leur <strong>Niveau</strong>de personnage. Les effets temporaires de longue durée se terminent également.",
                 "Name": "Repos"
             },
             "Strike": {
@@ -86,6 +98,10 @@
             "Escape": {
                 "Description": "Vous essayez de vous libérer d'un effet qui vous rend @Condition[restrained]. Vous effectuez un test d'<strong>Athlétisme</strong> et supprimez la condition Entravé de chaque effet pour lequel votre jet dépasse sa Difficulté de suppression.",
                 "Name": "Évasion"
+            },
+            "Search": {
+                "Description": "<p>Scrutez attentivement les environs pour découvrir ce que d'autres se sont donné la peine de dissimuler. Vous effectuez un test de <strong>Vigilance</strong>, à la recherche de créatures, d'objets ou d'autres secrets dissimulés.</p><p>En combat, cette action permet de repérer des créatures dissimulées grâce à la compétence <strong>Furtivité</strong> dans un rayon de 30 pieds. Hors-combat, vous passez 10 minutes ou plus à examiner minutieusement la zone immédiatement accessible ; vous pouvez également découvrir des pièges dissimulés, des objets cachés ou d'autres secrets de l'environnement.</p>",
+                "Name": "Chercher"
             }
         },
         "EFFECT_RESULT_TYPES": {
@@ -230,6 +246,14 @@
                     "hint": "Quel type de cible ou de zone est affecté par cette action ?",
                     "label": "Type de ciblage"
                 }
+            },
+            "persistRegion": {
+                "hint": "Produit une région persistante avec une pré-configuration optionnelle du comportement \"Action de Crucible\". Cette région persistera pendant toute la durée de l'Effet de ciblage personnel provoqué par cette action, ou indéfiniment si aucun Effet de ce genre n'a été configuré.",
+                "label": "Région persistente"
+            },
+            "regionBehavior": {
+                "hint": "Le comportement de la région qui détermine la manière dont la région persiste par cette action.",
+                "label": "Comportement de région"
             }
         },
         "SHEET": {
@@ -361,12 +385,13 @@
             "VocalTooltip": "Cette action requiert que l'utilisateur parle ou émette un son d'une autre manière.",
             "Weakened": "Affaibli",
             "WeakenedTooltip": "Cette action est plus faible que les attaques normales et applique un malus de dégâts de -6.",
-            "Undetectable": "Indétectable",
-            "UndetectableTooltip": "Cette action ne déclenche ni alerte classique ni détection magique, ce qui permet de conserver la furtivité et l'invisibilité lors de son utilisation.",
             "Rest": "Après repos",
             "RestTooltip": "Cette action ne peut être effectuée qu'immédiatement après la confirmation d'une action de Repos, et une seule action de ce type peut suivre chaque Repos.",
             "Keen": "Aiguisée",
-            "KeenTooltip": "Cette action est précise, abaissant son seuil de coup critique de 2 et augmentant ainsi la probabilité d'un Coup critique."
+            "KeenTooltip": "Cette action est précise, abaissant son seuil de coup critique de 2 et augmentant ainsi la probabilité d'un Coup critique.",
+            "CostMorale": "{morale}PM",
+            "Subtle": "Subtil",
+            "SubtleTooltip": "Cette action est généralement imperceptible, préservant la discrétion et l'invisibilité lors de son utilisation."
         },
         "TAG_CATEGORIES": {
             "Attack": "Attaque",
@@ -423,7 +448,7 @@
                     "RequiresOpening": "L'estocade nécessite une cible Exposée, À terre, Ralentie, Ébranlée, Paralysée ou Désarmée."
                 }
             },
-            "AuraNoToken": "Vous ne pouvez pas utiliser une action de type Aura sans qu'il y ait un token sur la scène !",
+            "AuraNoToken": "Vous ne pouvez pas utiliser une action de type émanation personnelle sans qu'il y ait un token sur la scène !",
             "BadStatus": "Vous ne pouvez pas utiliser l'action {action} en étant {status}.",
             "CannotAffordCost": "{name} a une valeur insuffisante de {resource} pour utiliser {action} !",
             "CannotAffordHands": {
@@ -496,7 +521,15 @@
             "TargetTooLarge": "La cible « {target} » est trop grande pour {action}.",
             "WeaponDropped": "Votre arme a été lâchée et doit être récupérée pour pouvoir utiliser cette action.",
             "RequiresGesture": "Vous devez connaître le Signe nécessaire pour cette action.",
-            "RequiresInflection": "Vous devez connaître l'Inflexion nécessaire pour cette action."
+            "RequiresInflection": "Vous devez connaître l'Inflexion nécessaire pour cette action.",
+            "CannotHideEngaged": "Vous ne pouvez pas vous Cacher en étant engagé avec un ennemi.",
+            "GemConjuredFlameShoddy": "Une Gemme de conjuration de flamme de qualité Bâclée ne peut pas invoquer d'élémentaire.",
+            "HideObservers": "Observateurs supplémentaires",
+            "MustJoinParty": "Vous ne pouvez effectuer l'action {action} qu'en tant que membre du groupe .",
+            "NoLanternOil": "Vous devez avoir une unité d'Huile pour lanterne dans votre inventaire pour allumer une lanterne.",
+            "RequiresAlchemistsToolkit": "Vous devez avoir un Kit l'alchimiste équipé dans votre Ceinture porte-outils.",
+            "RequiresElementalCondition": "{target} ne subit pas de condition élémentaire pouvant être affecté par cette action.",
+            "RestRecoverIncapacitated": "Vous ne pouvez pas faire de Repos ou de Récupération si vous êtes Mort ou Dément."
         },
         "Action": "Action",
         "AffectsScope": "Affecte {scope}",
@@ -598,7 +631,8 @@
             "Weakened": "Affaibli",
             "Falling": "En chute",
             "Flying": "En vol",
-            "Overrun": "Submergé"
+            "Overrun": "Submergé",
+            "Hexed": "Ensorcelé"
         },
         "DURATION": {
             "Combat": "Combat",
@@ -630,7 +664,18 @@
             "TalentTreeOpen": "Ouvrir l'Arbre des talents",
             "ToggleTree": "Basculer l'Arbre des talents",
             "ResetTalentsContent": "<p>Êtes-vous sûr de vouloir réinitialiser tous les Talents ?</p>",
-            "ResetTalentsTitle": "Réinitialisation des Talents : {actor}"
+            "ResetTalentsTitle": "Réinitialisation des Talents : {actor}",
+            "ProficiencyFilterAll": "Afficher toutes les Maîtrises",
+            "ProficiencyFilterTrained": "N'afficher que les Maîtrises d'entraînement",
+            "ResetProficiency": "Récupérer tous les points de Maîtrise",
+            "ResetProficiencyContent": "<p>Êtes-vous sûr de vouloir récupérer tous les points de Maîtrise attribués ? Vous conservez l'entraînement conféré par votre Ascendance, votre Origine ou vos Talents.</p>",
+            "ResetProficiencyTitle": "Récupérer des points de Maîtrise : {actor}",
+            "ResolveProgress": "Passez à l'étape de progression suivante",
+            "SyncActor": "Synchronisez depuis le Compendium",
+            "SyncActorContent": "<p>Réappliquez les Talents, l'Ascendance, l'Origine, la Taxonomie et l'Archétype de cet acteur à partir de leurs versions actuelles dans le compendium.</p><p><strong>Toute personnalisation apportée à ces éléments sur cet Acteur sera écrasée par les valeurs par défaut du compendium.</strong> Les Talents, l'équipement et les sorts octroyés que les sources ne fournissent plus seront supprimés.</p>",
+            "SyncActorTitle": "Synchronisez depuis le Compendium : {actor}",
+            "SyncActorUnresolved": "Aucune source de compendium trouvée pour les {details} de l'acteur {actor}. Ils seront laissés inchangés.",
+            "SyncActorResult": "{actor} synchronisé : Talents rafraîchis {synced}, supprimés {deleted}, objets réappliqués {details}."
         },
         "ADVERSARY": {
             "ACTIONS": {
@@ -708,7 +753,8 @@
                     "base": "Engagement de base",
                     "label": "Engagement",
                     "labelShort": "Engagement",
-                    "tooltip": "Nombre d'ennemis pouvant être engagés<br>(Taille - 2) + Bonus d'engagement"
+                    "tooltip": "L'engagement désigne le nombre total de combattants adverses que vous pouvez affronter simultanément sans devenir plus vulnérable. Les Héros ont une base de 1. Les Adversaires commencent à 1 et ajoutent +1 toutes les deux Tailles au-dessus de 4, arrondi au supérieur.<br>Engagement de base + Bonus d'engagement",
+                    "hint": "Nombre d'ennemis pouvant être Engagés"
                 },
                 "engagementBonus": {
                     "hint": "Un modificateur additif à l'engagement de base.",
@@ -726,7 +772,8 @@
                 "stride": {
                     "base": "Foulée de base",
                     "label": "Foulée",
-                    "tooltip": "Distance de déplacement par Point d'action dépensé."
+                    "tooltip": "Les actions de Déplacement vous permettent de vous déplacer d'une distance en pieds allant jusqu'à votre valeur de Foulée. Ce déplacement ne peut pas être fractionné, et la distance restante n'est pas conservée d'une action à l'autre si vous vous déplacez sur une distance inférieure à votre Foulée.<br>Foulée de base de l'Ascendance/Taxonomie + Bonus de Foulée",
+                    "hint": "Distance de déplacement par point d'Action dépensé."
                 },
                 "strideBonus": {
                     "hint": "Un modificateur additif à la vitesse de Foulée de l'acteur définie par l'ascendance ou la taxonomie.",
@@ -868,9 +915,6 @@
                 "empty": "Équipez jusqu'à {slots} outils ou consommables de votre sac à dos en cliquant sur l'icône bouclier.",
                 "header": "Ceinture porte-outils"
             },
-            "TRAINING": {
-                "header": "Talents de formation"
-            },
             "WEAPON": {
                 "empty": "Équipez des armes de votre sac à dos en cliquant sur l'icône bouclier.",
                 "header": "Armes"
@@ -895,7 +939,8 @@
             "Defenses": "Défenses",
             "PointsAvailable": "Disponible",
             "PointsSpent": "Utilisé",
-            "Resources": "Ressources"
+            "Resources": "Ressources",
+            "PointsGranted": "Novice"
         },
         "WARNINGS": {
             "InsufficientCurrency": "Monnaie insuffisante pour déduire {delta} {denom}",
@@ -907,7 +952,9 @@
             "OverspentAbility": "Trop de points de Caractéristique ont été dépensés",
             "OverspentTalent": "Trop de Talents ont été pris",
             "UnderspentAbility": "Dépensez des points de Caractéristique",
-            "UnderspentTalent": "Dépensez des points de Talent"
+            "UnderspentTalent": "Dépensez des points de Talent",
+            "OverspentProficiency": "Trop de points de Maîtrise ont été dépensés",
+            "UnderspentProficiency": "Dépensez des points de Maîtrise"
         },
         "Details": "Détails",
         "DisarmedStatus": "Désarmé !",
@@ -925,10 +972,11 @@
             "biography": "Biographie",
             "effects": "Effets",
             "inventory": "Inventaire",
-            "skills": "Compétences",
             "spells": "Sorts",
-            "talents": "Talents"
-        }
+            "talents": "Talents",
+            "proficiency": "Maîtrise"
+        },
+        "TrainingSpecific": "{training} {points}"
     },
     "AFFIX": {
         "FIELDS": {
@@ -961,6 +1009,9 @@
                     "label": "Palier d'affixe",
                     "hint": "Palier de cet affixe appliqué à cet objet."
                 }
+            },
+            "properties": {
+                "label": "Propriétés d'Affixe"
             }
         },
         "ConfigIdentity": "Identité d'affixe",
@@ -970,7 +1021,14 @@
         "Suffixes": "Suffixes",
         "TierDisplay": "Palier {value} / {max}",
         "TypePrefix": "Préfixe",
-        "TypeSuffix": "Suffixe"
+        "TypeSuffix": "Suffixe",
+        "PROPERTIES": {
+            "Cursed": "Maudit"
+        },
+        "WARNINGS": {
+            "CursedGamemasterOnly": "Seul un Maître du jeu peut enlever un affixe Maudit de cet objet."
+        },
+        "CursedName": "Maudit {name}"
     },
     "ADVANCEMENT": {
         "ExpectedLevel": "Niveau attendu",
@@ -1007,8 +1065,10 @@
             },
             "characteristics": {
                 "label": "Caractéristiques d'Ascendance",
-                "temperature.hint": "La température corporelle de cette Ascendance, Tiède par défaut.",
-                "temperature.label": "Température corporelle"
+                "temperature.hint": "La température corporelle de cette Ascendance, Chaude par défaut.",
+                "temperature.label": "Température corporelle",
+                "blooded.hint": "Si cette ascendance possède une forme de sang.",
+                "blooded.label": "De sang"
             },
             "movement": {
                 "label": "Déplacement",
@@ -1047,6 +1107,10 @@
                     "label": "Icône de l'Ascendance"
                 },
                 "label": "Interface utilisateur"
+            },
+            "training": {
+                "hint": "Points d'entraînement que cette Ascendance confère gratuitement ; ils ne coûtent aucun point de maîtrise et ne sont pas remboursables.",
+                "label": "Entraînement accordé"
             }
         },
         "SHEET": {
@@ -1088,13 +1152,21 @@
             "talents": {
                 "hint": "Configurez un ou plusieurs talents que cet Archétype reçoit automatiquement.",
                 "label": "Talents de base"
+            },
+            "training": {
+                "hint": "Points d'entraînement que cet Archétype confère gratuitement ; ils ne coûtent aucun point de maîtrise et ne sont pas remboursables.",
+                "label": "Entraînement accordé"
             }
         },
         "SHEET": {
             "Choose": "Choisissez l'Archétype",
             "Clear": "Effacer l'Archétype",
             "RequiredComponents": "<p><strong>{spell}</strong> nécessite des composants de sort qui ne figurent pas actuellement sur cet Archétype. Voulez-vous les ajouter automatiquement ?</p>",
-            "Skills": "Progression des Compétences"
+            "Training": "Préférence d'entraînement",
+            "TrainingAdd": "Ajouter une Maîtrise",
+            "TrainingRemove": "Retirer une Maîtrise",
+            "TrainingSpare": "Ne progresser qu'à partir des points que les compétences pondérées ne peuvent pas absorber.",
+            "TrainingHint": "Les adversaires de cet archétype dépensent leurs points d'entraînement proportionnellement à ces poids ; seuls les rapports entre eux importent donc, et non leurs valeurs absolues. Un poids nul ne réclame rien tant que toutes les maîtrises pondérées n'ont pas été entièrement entraînées, puis il se partage le reste."
         },
         "WARNINGS": {
             "InvalidAbilities": "La somme des valeurs d'échelle de caractéristique doit être égale à 12. Actuellement {sum}",
@@ -1200,8 +1272,6 @@
             "CannotRevokeMilestone": "Il n'existe aucune récompense d'échelon avec l'identifiant \"{identifier}\" sur le groupe \"{group}\"",
             "DuplicateMilestone": "Un échelon avec l'identifiant \"{identifier}\" a déjà été accordé au groupe \"{group}\"",
             "InvalidMilestoneNumber": "Le nombre d'échelons validés doit être un entier positif",
-            "InvalidMilestoneRecipient": "L'ID de l'acteur \"{id}\" ne peut pas recevoir d'échelon",
-            "InvalidMilestoneRevokee": "L'ID de l'acteur \"{id}\" ne peut pas avoir d'échelon révoqué",
             "InvalidTerms": "Impossible d'analyser {terms} comme termes de récompense valides.",
             "RequiresGM": "Vous devez être un Maître du jeu pour utiliser les enrichisseurs de Récompense."
         },
@@ -1230,12 +1300,8 @@
                 "hint": "Configurez les langues que cette Origine fournit automatiquement.",
                 "label": "Langues connues"
             },
-            "skills": {
-                "hint": "Configurez les compétences que cette Origine fournit automatiquement avec une formation de novice. Typiquement, une Origine a une formation dans deux compétences.",
-                "label": "Compétences de base"
-            },
             "talents": {
-                "hint": "Configurez un ou plusieurs talents que cette Origine reçoit automatiquement. Typiquement, une Origine reçoit deux talents.",
+                "hint": "Configurez un ou plusieurs talents que cette Origine reçoit automatiquement. Typiquement, une Origine reçoit trois talents.",
                 "label": "Talents acquis"
             },
             "ui": {
@@ -1248,6 +1314,10 @@
                     "label": "Icône d'Origine"
                 },
                 "label": "Interface utilisateur"
+            },
+            "training": {
+                "hint": "Maîtrises pour lesquelles cet historique confère un point d'entraînement chacune, sans coût en points de maîtrise.",
+                "label": "Entraînement accordé"
             }
         },
         "SHEET": {
@@ -1255,10 +1325,11 @@
             "Choose": "Choisir une Origine",
             "Clear": "Effacer l'Origine",
             "Identity": "Identité",
-            "Skills": "Compétences",
             "TalentAdd": "Ajouter un Talent",
             "TalentDrop": "Ajoutez un talent à cette Origine en glissant-déposant depuis le compendium des Talents.",
-            "TalentRemove": "Retirer un Talent"
+            "TalentRemove": "Retirer un Talent",
+            "Grants": "Accordé par l'Origine",
+            "GrantWarning": "{count} de {expected} {label} accordé. Les Héros qui choisissent cette Origine commenceront avec moins que prévu."
         }
     },
     "BASE_EFFECT": {
@@ -1423,7 +1494,8 @@
             "Taxonomy": "Feuille de taxonomie de Crucible",
             "Tool": "Feuille d'outil de Crucible",
             "Weapon": "Feuille d'arme de Crucible",
-            "Effect": "Feuille d'Effet de Crucible"
+            "Effect": "Feuille d'Effet de Crucible",
+            "ActionBehavior": "Fiche de comportement d'action de Crucible"
         },
         "Base": "Base",
         "Bonus": "Bonus",
@@ -1471,11 +1543,11 @@
     },
     "DEFENSES": {
         "TOOLTIPS": {
-            "Fortitude": "{base} + ((Force + Sagesse) / 4)",
-            "Madness": "{base} + (Folie / 10)",
-            "Reflex": "{base} + ((Dextérité + Intellect) / 4)",
-            "Willpower": "{base} + ((Robustesse + Présence) / 4)",
-            "Wounds": "{base} + (Lésions / 10)"
+            "Fortitude": "",
+            "Madness": "",
+            "Reflex": "",
+            "Willpower": "",
+            "Wounds": ""
         },
         "Armor": "Armure",
         "Block": "Blocage",
@@ -1488,12 +1560,25 @@
         "Willpower": "Volonté",
         "Wounds": "Seuil de guérison",
         "MadnessShort": "Ralliement",
-        "WoundsShort": "Guérison"
+        "WoundsShort": "Guérison",
+        "FORMULAS": {
+            "Armor": "Base d'Armure + Bonus de Qualité",
+            "Block": "Somme des armes de Blocage équipées",
+            "Fortitude": "{base} + ((Force + Sagesse) / 4)",
+            "Madness": "{base} + (Folie / 10)",
+            "Parry": "Somme des armes de Parade équipées",
+            "Physical": "Armure + Esquive + Parade + Blocage",
+            "Reflex": "{base} + ((Dextérité + Intellect) / 4)",
+            "Willpower": "{base} + ((Robustesse + Présence) / 4)",
+            "Wounds": "{base} + (Lésions / 10)",
+            "Dodge": "Esquive d'armure de base + max(Dextérité - Évolution, 0) + Enchantement"
+        }
     },
     "DETECTION_MODES": {
         "Echolocation": "Écholocalisation",
         "SenseCreature": "Détection de créature",
-        "ThermalVision": "Vision thermique"
+        "ThermalVision": "Vision thermique",
+        "BloodSense": "Traque sanguinaire"
     },
     "DICE": {
         "DIFFICULTIES": {
@@ -1587,12 +1672,7 @@
     },
     "HOOKS": {
         "NoModuleHooks": "Aucun hook de module n'est enregistré pour cet identifiant.",
-        "ToggleSource": "Basculer la Source",
-        "WARNINGS": {
-            "GemConjuredFlameShoddy": "Une Gemme de conjuration de flamme de qualité Bâclée ne permet pas d'invoquer d'élémentaire.",
-            "NoLanternOil": "Vous devez avoir une unité d'Huile pour lanterne dans votre inventaire pour allumer une lanterne.",
-            "RestRecoverIncapacitated": "Vous ne pouvez pas faire de Repos ou de Récupération si vous êtes Mort ou Dément."
-        }
+        "ToggleSource": "Basculer la Source"
     },
     "HAZARD": {
         "DefaultActor": "Environnement",
@@ -1734,7 +1814,12 @@
             "TalentDrop": "Ajoutez un talent en glissant-déposant un objet Talent dans cette zone.",
             "TalentRemove": "Retirer un Talent",
             "Type": "Type d'équipement",
-            "EquipmentScale": "Adapter automatiquement le niveau de qualité au niveau de la créature"
+            "EquipmentScale": "Adapter automatiquement le niveau de qualité au niveau de la créature",
+            "TalentRequirementAdd": "Requiert une Maîtrise",
+            "TalentRequirementRemove": "Supprimer l'exigence",
+            "TalentRequirements": "Maîtrises requises",
+            "TalentRequirementsHint": "Un rang dans chacune de ces Maîtrises est requis avant de pouvoir prendre ce Talent.",
+            "Training": "Entraînement"
         },
         "WARNINGS": {
             "HookAlreadyExists": "{item} possède déjà une fonction pour le hook \"{hook}\".",
@@ -1747,7 +1832,8 @@
             "CombineEquipped": "{item} ne peut être combiné dans un empilement en étant équipé.",
             "CombineInvalidTarget": "{item} ne peut être combiné : la cible doit être un objet différent du même acteur.",
             "CombineQuantity": "Impossible de combiner {quantity} unités de {item} contenant un empilement de {available}.",
-            "SplitQuantity": "Impossible de dissocier {quantity} unités de {item} contenant un empilement de {available}."
+            "SplitQuantity": "Impossible de dissocier {quantity} unités de {item} contenant un empilement de {available}.",
+            "CursedDivestment": "{name} est maudit et ne peut être retiré. Un Maître du jeu doit effectuer cette action."
         },
         "RANDOMIZE": {
             "Title": "Objet enchanté aléatoire",
@@ -1861,6 +1947,38 @@
                     "label": "Demander au MJ"
                 }
             }
+        },
+        "ACTION": {
+            "FIELDS": {
+                "action": {
+                    "hint": "Action à potentiellement exécuter sur tout token déclenchant un événement lié à ce comportement.",
+                    "label": "Action déclencée"
+                },
+                "actor": {
+                    "hint": "L'acteur responsable de la création de ce comportement. Cet acteur effectuera les jets pour toutes les actions déclenchées.",
+                    "label": "Acteur d'origine"
+                },
+                "frequency": {
+                    "hint": "À quelle fréquence cette action doit-elle pouvoir être appliquée à un token déclencheur ?",
+                    "label": "Fréquence"
+                },
+                "origin": {
+                    "hint": "L'effet chargé de suivre l'existence de ce comportement.",
+                    "label": "Origine"
+                }
+            },
+            "FREQUENCIES": {
+                "every": "À chaque fois",
+                "once": "Une fois",
+                "roundActor": "Une fois par Round par Acteur"
+            },
+            "TABS": {
+                "action": "Action",
+                "effects": "Effets",
+                "behavior": "Comportement"
+            },
+            "ConfigTitle": "Action de Région : {action}",
+            "RegionConfiguration": "Configuration de Région"
         }
     },
     "RESOURCES": {
@@ -1994,6 +2112,14 @@
             "talent": {
                 "hint": "Compendiums utilisés comme sources pour les talents dans l'arbre de talents.",
                 "label": "Sources des Talents"
+            },
+            "archetype": {
+                "hint": "Compendiums utilisés comme sources d'archétypes des adversaires.",
+                "label": "Sources d'archétype"
+            },
+            "taxonomy": {
+                "hint": "Compendiums utilisés comme sources de taxonomies des adversaires.",
+                "label": "Sources de taxonomie"
             }
         },
         "AutoConfirmAll": "Confirmation automatique pour toutes les Actions",
@@ -2010,10 +2136,6 @@
     },
     "SKILL": {
         "CATEGORY": {
-            "CRAFTING": {
-                "hint": "Compétences artisanales reflétant la capacité de votre personnage à créer des objets ou de l'équipement.",
-                "label": "Artisanat"
-            },
             "EXPLORATION": {
                 "hint": "Les compétences d'exploration concernent votre capacité à traverser le monde et relever ses défis.",
                 "label": "Exploration"
@@ -2025,29 +2147,11 @@
             "SOCIAL": {
                 "hint": "Les compétences sociales concernent la capacité de votre personnage à interagir avec d'autres personnes ou groupes.",
                 "label": "Social"
+            },
+            "TRADE": {
+                "hint": "Compétences artisanales reflétant la capacité de votre personnage à créer des objets ou de l'équipement.",
+                "label": "Commerce"
             }
-        },
-        "LABELS": {
-            "alchemy": "Alchimie",
-            "arcana": "Arcanes",
-            "athletics": "Athlétisme",
-            "awareness": "Vigilance",
-            "cooking": "Cuisine",
-            "deception": "Duperie",
-            "diplomacy": "Diplomatie",
-            "enchanting": "Enchantement",
-            "fletching": "Empennage",
-            "glyphweaving": "Tissage de glyphes",
-            "intimidation": "Intimidation",
-            "jewelcraft": "Joaillerie",
-            "medicine": "Médecine",
-            "performance": "Performance",
-            "science": "Science",
-            "smithing": "Forge",
-            "society": "Société",
-            "stealth": "Furtivité",
-            "tailoring": "Couture",
-            "wilderness": "Nature"
         },
         "RANKS": {
             "ADEPT": {
@@ -2081,7 +2185,6 @@
         },
         "AcquiredRanks": "Rangs acquis",
         "CantAfford": "Vous ne pouvez pas vous permettre d'augmenter cette compétence. Le prochain rang coûte {cost} points et vous avez {points} points de compétence disponibles.",
-        "CategoryHeader": "Compétences : {category}",
         "ChoosePath": "Vous devez choisir une voie de spécialisation avant de faire progresser cette Compétence davantage.",
         "Id": "ID de Compétence",
         "Overview": "Aperçu des Compétences",
@@ -2257,12 +2360,12 @@
                 "other": "Le sort {action} requiert {hands} main de libre à lancer."
             },
             "CannotUseNotComposed": "Vous ne pouvez pas lancer un sort qui n'a pas été complètement composé.",
-            "CannotUseSilenced": "Impossible d'utiliser des Inflexions en étant Aphone.",
             "IconicAlreadyKnown": "L'acteur {actor} connait déjà le Sort iconique {spell}.",
             "IconicNoSlots": "L'acteur {actor} ne possède aucun emplacement de Sort iconique disponible.",
             "IconicNotSatisfied": "L'acteur {actor} n'a pas la connaissance nécessaire pour apprendre le sort iconique {spell}.",
             "NotConfigured": "Ce sort iconique n'est pas encore totalement configuré. Les trois composantes de sorcellerie doivent être définies.",
-            "SorcererNoIconic": "En tant que {talent}, vous ne pouvez lancer de Sorts iconiques."
+            "SorcererNoIconic": "En tant que {talent}, vous ne pouvez lancer de Sorts iconiques.",
+            "AuraRequiresCombat": "Une Aura ne peut être lancée que pendant le combat"
         },
         "DamageType": "Type de dégâts",
         "Iconic": "Sort iconique",
@@ -2300,31 +2403,27 @@
             "description": {
                 "label": "Description du Talent"
             },
-            "gesture": {
-                "hint": "Obtenir ce talent accorde la connaissance d'un Signe de sorcellerie spécifique.",
-                "label": "Signe"
-            },
             "iconicSpells": {
                 "hint": "Un nombre d'emplacements de Sort iconique accordés par ce Talent.",
                 "label": "Sorts iconiques"
-            },
-            "inflection": {
-                "hint": "Obtenir ce talent accorde la connaissance d'une Inflexion de sorcellerie spécifique.",
-                "label": "Inflexion"
             },
             "nodes": {
                 "hint": "Assignez ce Talent pour être acheté depuis un ou plusieurs nœuds particuliers dans l'Arbre de Talents.",
                 "label": "Nœuds de Talent"
             },
-            "rune": {
-                "hint": "Obtenir ce talent accorde la connaissance d'une Rune de sorcellerie spécifique.",
-                "label": "Rune"
-            },
             "training": {
-                "hint": "Ce talent accorde-t-il un certain rang de formation dans un domaine particulier ?",
-                "label": "Formation accordée",
-                "rank.label": "Rang d'entraînement",
-                "type.label": "Type d'entraînement"
+                "hint": "Posséder ce talent confère un point d'entraînement dans le domaine indiqué ici, que le talent ait été choisi ou obtenu. Laissez la case vide si ce talent ne permet pas de progresser dans un entraînement.",
+                "label": "Formation accordée"
+            },
+            "requirements": {
+                "training": {
+                    "hint": "Rangs d'entraînement qu'un personnage doit déjà posséder avant de pouvoir prendre ce Talent.",
+                    "label": "Entraînement requis"
+                }
+            },
+            "spellcraft": {
+                "hint": "Obtenir ce Talent confère la connaissance d'une composante de sorcellerie : une Rune, un Signe, ou une Inflexion.",
+                "label": "Composante de sorcellerie"
             }
         },
         "HOOKS": {
@@ -2365,7 +2464,6 @@
             "Signature": "Signature",
             "Skill": "Compétence",
             "Spell": "Sorcellerie",
-            "Training": "Formation",
             "Utility": "Utilitaire"
         },
         "RANKS": {
@@ -2374,12 +2472,6 @@
             "Proficient": "Compagnon",
             "Trained": "Novice",
             "Untrained": "Non formé"
-        },
-        "TRAINING": {
-            "Craft": "Formation d'Artisanat",
-            "Skill": "Formation de Compétence",
-            "Spell": "Formation de Sorcellerie",
-            "Weapon": "Formation d'Arme"
         },
         "WARNINGS": {
             "AlreadyOwned": "Vous possédez déjà {name} et ne pouvez pas l'ajouter une seconde fois.",
@@ -2402,7 +2494,8 @@
         "Locked": "Verrouillé",
         "Tier": "Palier {tier}",
         "SignatureLimit": "Limite de Signatures atteinte",
-        "SignatureNext": "Prochaine au niveau {level}"
+        "SignatureNext": "Prochaine au niveau {level}",
+        "TrainingGrant": "{training} +1"
     },
     "TAXONOMY": {
         "CATEGORIES": {
@@ -2439,7 +2532,9 @@
                 "label": "Caractéristiques de Taxonomie",
                 "spells.label": "Peut lancer des sorts",
                 "temperature.hint": "La température corporelle des créatures de cette Taxonomie. Si laissé vide, la température par défaut sera celle de la catégorie de créature choisie.",
-                "temperature.label": "Température corporelle"
+                "temperature.label": "Température corporelle",
+                "blooded.hint": "Indique si cette Taxonomie possède une forme de sang. Prend par défaut la caractéristique de « sang » de la catégorie de créature choisie.",
+                "blooded.label": "De sang"
             },
             "identifier": {
                 "hint": "Un identifiant textuel utilisé pour référencer uniquement cette Taxonomie dans les étiquettes, actions ou autres éléments d'interface. Cet identifiant doit être alphanumérique sans espaces ni caractères spéciaux.",
@@ -2568,7 +2663,7 @@
         },
         "FIELDS": {
             "skills": {
-                "hint": "Identifiez les compétences ou l'artisanat qui impliquent l'utilisation de cet outil en particulier.",
+                "hint": "Identifiez les compétences qui impliquent l'utilisation de cet outil en particulier.",
                 "label": "Compétences liées"
             }
         }
@@ -2608,7 +2703,8 @@
             "skill": "Compétence Crucible"
         },
         "RegionBehavior": {
-            "crucible.hazard": "Crucible Péril"
+            "crucible.hazard": "Crucible Péril",
+            "crucible.action": "Action de Crucible"
         }
     },
     "WALKTHROUGH": {
@@ -2635,22 +2731,16 @@
         "CannotEquipSlotInUse": "L'acteur {actor} ne peut pas équiper {item} car l'emplacement d'objet {type} est déjà utilisé.",
         "CannotEquipTaxonomy": "L'acteur {actor} ne peut pas équiper l'objet \"{item}\" car la taxonomie \"{taxonomy}\" est incapable d'utiliser de l'équipement.",
         "NoParty": "Vous devez avoir un groupe principal configuré pour cela.",
-        "SkillRequireAncestryBackground": "Vous devez assigner à la fois une Ascendance et une Origine avant de pouvoir acheter des rangs de Compétence."
+        "SkillRequireAncestryBackground": "Vous devez assigner à la fois une Ascendance et une Origine avant de pouvoir acheter des rangs de Compétence.",
+        "TrainingCannotDecrease": "Vous ne pouvez pas diminuer cette Maîtrise davantage.",
+        "TrainingCannotIncrease": "Vous ne pouvez pas augmenter cette Maîtrise davantage."
     },
     "WEAPON": {
         "CATEGORIES": {
             "Balanced": "Équilibrée",
             "CategoryHands": "{category} ({hands}m)",
-            "Heavy": "Lourde",
-            "Light": "Légère",
-            "Mechanical": "Mécanique",
-            "Projectile": "Projectile",
-            "Shield": "Bouclier",
             "ShieldHeavy": "Bouclier lourd",
-            "ShieldLight": "Bouclier léger",
-            "Simple": "Simple",
-            "Talisman": "Talisman",
-            "Unarmed": "Mains nues"
+            "ShieldLight": "Bouclier léger"
         },
         "FIELDS": {
             "damageType": {
@@ -2693,7 +2783,7 @@
             "Engaging": "Engagement",
             "EngagingTooltip": "Les armes de cette catégorie vous permettent de mieux combattre plusieurs ennemis, augmentant votre Engagement de +1.",
             "Intuitive": "Intuitive",
-            "IntuitiveTooltip": "Cette arme est assez intuitive pour être utilisée sans formation. La pénalité de Compétence lors de l'utilisation de cette arme sans formation est seulement de -1 au lieu de -4.",
+            "IntuitiveTooltip": "Cette arme est facile à comprendre et peut être utilisée sans entraînement formel. Vous bénéficiez d'un point de maîtrise supplémentaire lorsque vous la maniez.",
             "Keen": "Aiguisée",
             "KeenTooltip": "Cette arme est particulièrement mortelle lorsqu'elle réalise un coup critique. NOTE IMPORTANTE - la propriété aiguisée n'est pas encore implémentée dans le playtest.",
             "Natural": "Naturelle",
@@ -2714,7 +2804,7 @@
             "ThrownTooltip": "Cette arme est conçue pour être adaptée au lancer et ne subit pas la pénalité de Fléaux qui est habituellement appliquée à l'action Lancer une Arme.",
             "Versatile": "Flexible",
             "VersatileTooltip": "Cette arme peut être maniée à une ou deux mains, alternant entre ces prises sans aucun coût en point d'Action. L'alternance de prise la fait correspondre à une arme de ce type : une arme à une main devient une arme plus grande à deux mains, et une arme à deux mains devient une arme plus petite à une main.",
-            "UntrainedTooltip": "Votre personnage manque de formation aux armes {training} et subit un malus de Compétence de -4 lorsqu'il attaque avec cette arme."
+            "UntrainedTooltip": "Votre personnage n'est pas assez Entraîné à l'utilisation des armes {training} et subit un malus à l'attaque."
         }
     },
     "ACTIONS": {
@@ -2769,5 +2859,75 @@
         "Swallow": {
             "AlreadySwallowing": "Vous êtes déjà en train d'avaler une autre créature."
         }
+    },
+    "TRAINING": {
+        "BREAKDOWN": {
+            "Bonus": "Bonus",
+            "Cap": "Plafond de niveau",
+            "Granted": "Accordé",
+            "Increases": "Augmentations",
+            "Next": "Rang suivant ({rank})",
+            "Talents": "Talents",
+            "Total": "Total"
+        },
+        "LABELS": {
+            "alchemy": "Alchimie",
+            "arcana": "Arcanes",
+            "armor": "Combat en armure",
+            "armorShort": "Armure",
+            "athletics": "Athlétisme",
+            "awareness": "Vigilance",
+            "cooking": "Cuisine",
+            "deception": "Duperie",
+            "diplomacy": "Diplomatie",
+            "elemental": "Sorcellerie élémentaire",
+            "elementalShort": "Élémentaire",
+            "enchanting": "Enchantement",
+            "fletching": "Empennage",
+            "glyphweaving": "Tissage de glyphe",
+            "heavy": "Armes lourdes",
+            "heavyShort": "Lourde",
+            "intimidation": "Intimidation",
+            "jewelcraft": "Joaillerie",
+            "light": "Armes légères",
+            "lightShort": "Légère",
+            "mechanical": "Armes mécaniques",
+            "mechanicalShort": "Mécanique",
+            "medicine": "Médecine",
+            "natural": "Armes naturelles",
+            "naturalShort": "Naturelle",
+            "performance": "Performance",
+            "physical": "Sorcellerie kinématique",
+            "physicalShort": "Kinématique",
+            "projectile": "Armes à projectile",
+            "projectileShort": "Projectile",
+            "science": "Science",
+            "shield": "Combat au bouclier",
+            "shieldShort": "Bouclier",
+            "simpleShort": "Simple",
+            "smithing": "Forge",
+            "society": "Société",
+            "spiritual": "Sorcellerie spirituelle",
+            "spiritualShort": "Spirituelle",
+            "stealth": "Furtivité",
+            "tailoring": "Couture",
+            "talisman": "Talismans",
+            "talismanShort": "Talisman",
+            "unarmed": "Combat à mains nues",
+            "unarmedShort": "Mains nues",
+            "wilderness": "Nature"
+        },
+        "GROUPS": {
+            "Equipment": "Maîtrises d'équipement",
+            "Exploration": "Compétences d'exploration",
+            "Knowledge": "Compétences de connaissance",
+            "Social": "Compétences sociales",
+            "Spell": "Maîtrises de sorcellerie",
+            "Trade": "Compétences de commerce",
+            "Weapon": "Maîtrises d'arme"
+        },
+        "Decrease": "Récupérer un point de Maîtrise",
+        "Increase": "Allouer un point de Maîtrise",
+        "PassiveTooltip": "Votre score passif pour cet entraînement."
     }
 }

@@ -158,7 +158,7 @@
         },
         "corruptionAbsorp": {
             "name": "Absorption de Corruption",
-            "description": "<p>La @ref[actor.name]{créature} possède une capacité exceptionnelle à ignorer les effets de la magie de Mort. Sa résistance à la <strong>Corruption</strong> est doublée et si cette résistance réduit une quantité de dégâts en dessous de zéro, le montant négatif est reçu comme <strong>Guérison</strong> à la place.</p>"
+            "description": "<p>La @ref[actor.name]{créature} possède une capacité exceptionnelle à ignorer les effets de la magie de <strong>Mort</strong>. Sa résistance à la <strong>Corruption</strong> est doublée et si cette résistance réduit une quantité de dégâts en dessous de zéro, le montant négatif est reçu comme <strong>Guérison</strong> à la place.</p>"
         },
         "echolocation0000": {
             "name": "Écholocalisation",
@@ -170,7 +170,7 @@
         },
         "elusiveFlight000": {
             "name": "Vol insaisissable",
-            "description": "<p>Cette @ref[actor.name]{créature} est particulièrement insaisissable en vol, capable de plonger dans et hors du combat sans provoquer de <strong>Désengagement</strong>. Elle peut être engagée si elle atterrit au sol et l'Assaut opportuniste peut s'appliquer si elle tente de retourner en vol.</p>"
+            "description": "<p>Cette @ref[actor.name]{créature} est particulièrement insaisissable en vol, capable de plonger dans et hors du combat sans provoquer de @Action[default reactiveStrike]. Elle peut être engagée si elle atterrit au sol et de telles frappes peuvent être utilisées si elle tente de retourner en vol.</p>"
         },
         "extendedBreath00": {
             "name": "Apnée prolongée",
@@ -186,7 +186,7 @@
         },
         "glider0000000000": {
             "name": "Planeur",
-            "description": "<p>@ref[actor.name]{La créature} contrôle sa descente quand elle tombe. À moins qu'elle ne soit Neutralisée ou Entravée, la chute devient un <strong>Vol plané</strong> : Un déplacement de Vol descendant plutôt qu'un impact, ne subissant aucun dégât de chute.</p><p>En planant, la <strong>Foulée</strong> de la créature est doublée et un déplacement gratuit lui est alloué, afin qu'elle puisse toujours planer au moins sur une courte distance. Son vol plané doit descendre, et elle s'immobilise là où le déplacement s'achève ; si elle termine son vol plané en l'air, elle obtient la condition @Condition[flying].</p>",
+            "description": "<p>@ref[actor.name]{La créature} contrôle sa descente quand elle tombe. À moins qu'elle ne soit @Condition[incapacitated] ou @Condition[restrained], la chute devient un <strong>Vol plané</strong> : Un déplacement de <strong>Vol</strong> descendant plutôt qu'un impact, ne subissant aucun dégât de chute.</p><p>En planant, la <strong>Foulée</strong> de la créature est doublée et un déplacement gratuit lui est alloué, afin qu'elle puisse toujours planer au moins sur une courte distance. Son vol plané doit descendre, et elle s'immobilise là où le déplacement s'achève ; si elle termine son vol plané en l'air, elle obtient la condition @Condition[flying].</p>",
             "actions": {
                 "fallGlide": {
                     "name": "Vol plané",
@@ -204,12 +204,12 @@
         },
         "graveMark0000000": {
             "name": "Marque funéraire",
-            "description": "<p>Lorsque la @ref[actor.name]{créature} réussit un Coup critique avec une attaque mêlée, elle laisse une Marque funéraire funeste sur sa cible.</p>",
+            "description": "<p>Lorsque la @ref[actor.name]{créature} réussit un <strong>Coup critique</strong> avec une attaque mêlée, elle laisse une <strong>Marque funéraire</strong> funeste sur sa cible.</p>",
             "actions": {
                 "graveMark": {
                     "name": "Marque funéraire",
                     "condition": "Lors d'un Coup critique avec une attaque de mêlée.",
-                    "description": "<p>Après avoir réussi un <strong>Coup critique</strong> avec une attaque de mêlée, la @ref[actor.name]{créature} attaque la défense de <strong>Volonté</strong> de la cible, laissant une Marque funéraire sur une réussite, ce qui inflige la condition @Condition[exhausted] qui persiste jusqu'à ce que la cible termine un <strong>Repos</strong>.</p><p>Si une créature humanoïde portant une Marque funéraire meurt sous l'effet de cette marque, elle se relève à son tour suivant en tant que @UUID[Compendium.crucible.taxonomy.Item.ghoul00000000000]{Goule}.</p>",
+                    "description": "<p>Après avoir réussi un <strong>Coup critique</strong> avec une attaque de mêlée, la @ref[actor.name]{créature} attaque la défense de <strong>Volonté</strong> de la cible, laissant une <strong>Marque funéraire</strong> sur une réussite, ce qui inflige la condition @Condition[exhausted] qui persiste jusqu'à ce que la cible termine un @Action[default rest].</p><p>Si une créature humanoïde portant une <strong>Marque funéraire</strong> meurt sous l'effet de cette marque, elle se relève à son <strong>Tour</strong> suivant en tant que @UUID[Compendium.crucible.taxonomy.Item.ghoul00000000000]{Goule}.</p>",
                     "effects": {
                         "Grave Mark": {
                             "name": "Marque funéraire"
@@ -350,7 +350,7 @@
                 "oozeCorrodeWeapon": {
                     "name": "Corrosion d’arme",
                     "condition": "Frappée en mêlée par une arme faite de métal.",
-                    "description": "<p>Lorsqu'elle est frappée par une arme de mêlée en métal, la vase tente de consommer l'arme elle-même, la brisant potentiellement.</p><p>Cette attaque est <strong>Inoffensive</strong>, mais si elle réussit, la <strong>Qualité</strong> de l'arme utilisée dans l'attaque est rétrogradée d'un rang. Sur une Réussite critique ou si l'arme est déjà <strong>Bâclée</strong>, l'arme devient entièrement <strong>Brisée</strong>. Les armes enchantées sont protégées contre cet effet.</p>"
+                    "description": "<p>Lorsqu'elle est frappée par une arme de mêlée en métal, la vase tente de consommer l'arme elle-même, la brisant potentiellement.</p><p>Cette attaque est @Rule[action.harmless], mais si elle réussit, la <strong>Qualité</strong> de l'arme utilisée dans l'attaque est rétrogradée d'un rang. Sur une <strong>Réussite critique</strong> ou si l'arme est déjà <strong>Bâclée</strong>, l'arme devient entièrement <strong>Brisée</strong>. Les armes <strong>Enchantées</strong> sont protégées contre cet effet.</p>"
                 }
             }
         },
@@ -370,13 +370,13 @@
             "actions": {
                 "oozeSubdivide": {
                     "name": "Subdiviser",
-                    "description": "<p>Les cellules de la vase se divisent rapidement et la créature se sépare en deux ! La créature originale et son clone divisent également sa <strong>Santé</strong> restante. La <strong>Taille</strong> de chaque créature résultante est diminuée de 1.</p><p>Si elle est en combat, la nouvelle créature agit comme une <strong>Invocation</strong> et rejoint le combat avec une <strong>Initiative</strong> de 1. Cette Action ne peut être utilisée que si la créature a une Taille supérieure à 2. La vase créée n'a jamais un rang supérieur à <strong>Normal</strong>.</p>"
+                    "description": "<p>Les cellules de la vase se divisent rapidement et la créature se sépare en deux ! La créature originale et son clone divisent également sa <strong>Santé</strong> restante. La <strong>Taille</strong> de chaque créature résultante est diminuée de 1et son niveau de menace est réduit, par exemple une vase <strong>Élite</strong> devient une vase <strong>Normale</strong>. La nouvelle vase arrive avec seulement l'<strong>Action</strong> et le <strong>Focus</strong> de ce qu'il restait à son parent après l'exécution de cette Action. Si elle est en combat, la nouvelle créature agit comme une <strong>Invocation</strong> et rejoint le combat avec une <strong>Initiative</strong> de 1. Cette Action ne peut être utilisée que si la créature a une <strong>Taille</strong> supérieure à 2.</p>"
                 }
             }
         },
         "packhunter000000": {
             "name": "Chasse en meute",
-            "description": "<p>Cette créature chasse en meute, comptant sur ses alliés pour déborder et harceler une cible afin de l'exposer à davantage de dégâts.</p><p>Cette créature double le nombre des Faveurs accordées en attaquant un ennemi @Condition[flanked].</p>"
+            "description": "<p>Cette créature chasse en meute, comptant sur ses alliés pour déborder et harceler une cible afin de l'exposer à davantage de dégâts.</p><p>Cette créature double le nombre des <strong>Faveurs</strong> accordées en attaquant un ennemi @Condition[flanked].</p>"
         },
         "pouncingStrike00": {
             "name": "Frappe bondissante",
@@ -438,7 +438,7 @@
             "actions": {
                 "repugnantPustules": {
                     "name": "Pustules répugnantes",
-                    "description": "<p>Lorsque la @ref[actor.name]{créature} est touchée par une <strong>Frappe</strong>, elle peut partiellement éclater pour libérer un jet de fluide écœurant qui inflige des dégâts de <strong>Corruption</strong>. Cette action dépend de la <strong>Robustesse</strong> et cible la défense de <strong>Réflexes</strong> de toute créature à moins de @[feet 3].</p><p>Sur une <strong>Réussite critique</strong>, la cible affectée devient temporairement @Condition[diseased] pendant 3 rounds.</p>",
+                    "description": "<p>Lorsque la @ref[actor.name]{créature} est touchée par une <strong>Frappe</strong>, elle peut partiellement éclater pour libérer un jet de fluide écœurant qui inflige des dégâts de <strong>Corruption</strong>. Cette action dépend de la <strong>Robustesse</strong> et cible la défense de <strong>Réflexes</strong> de toute créature à moins de @[feet 3].</p><p>Sur une <strong>Réussite critique</strong>, la cible affectée devient temporairement @Condition[diseased] pendant <strong>3 Rounds</strong>.</p>",
                     "effects": {
                         "Repugnant Pustules": {
                             "name": "Pustules répugnantes"
@@ -549,7 +549,7 @@
         },
         "swallow000000000": {
             "name": "Engloutir",
-            "description": "<p>@Ref[actor.name]{Cette créature} peut avaler en entier des créatures dont la Taille est inférieure d'au moins 2 à la sienne. Une seule créature peut être avalée à la fois, à moins qu'une créature supplémentaire ne soit d'une Taille égale ou inférieure au quart de celle de cette créature.</p>",
+            "description": "<p>@Ref[actor.name]{Cette créature} peut avaler en entier des créatures dont la <strong>Taille</strong> est inférieure d'au moins 2 à la sienne. Une seule créature peut être avalée à la fois, à moins qu'une créature supplémentaire ne soit d'une <strong>Taille</strong> égale ou inférieure au quart de celle de cette créature.</p>",
             "actions": {
                 "swallow": {
                     "name": "Engloutir",
@@ -571,7 +571,7 @@
         },
         "swarm00000000000": {
             "name": "Nuée",
-            "description": "<p>Cet adversaire est un groupe de nombreuses créatures identiques qui opèrent comme une unique foule grouillante d'ennemis.</p><ul><li><p>Le maximum de <strong>Santé</strong> est doublé.</p></li><li><p>Contre toute source de dégâts à cible unique, la nuée obtient une <strong>Résistance</strong> additionnelle égale à sa <strong>Robustesse</strong>.</p></li><li><p>La <strong>Taille</strong> de la nuée décroît à mesure que sa Santé diminue, jusqu'à une taille minimum de 2.</p></li></ul>"
+            "description": "<p>Cet adversaire est un groupe de nombreuses créatures identiques qui opèrent comme une unique foule grouillante d'ennemis.</p><ul><li><p>Le maximum de <strong>Santé</strong> est doublé.</p></li><li><p>Contre toute source de dégâts à cible unique, la nuée obtient une <strong>Résistance</strong> additionnelle égale à sa <strong>Robustesse</strong>.</p></li><li><p>La <strong>Taille</strong> de la nuée décroît à mesure que sa <strong>Santé</strong> diminue, jusqu'à une <strong>Taille</strong> minimum de 2.</p></li></ul>"
         },
         "swoopingStrike00": {
             "name": "Frappe en piqué",
@@ -635,11 +635,11 @@
         },
         "tuskCharge000000": {
             "name": "Charge du sanglier",
-            "description": "Le Sanglier baisse la tête et charge à une vitesse frénétique, ses défenses dépassant sous un gosier baveux.",
+            "description": "<p>La @ref[actor.name]{créature} baisse la tête et charge à une vitesse frénétique, ses défenses dépassant sous un gosier baveux.</p>",
             "actions": {
                 "tuskCharge": {
                     "name": "Charge du sanglier",
-                    "description": "<p>Charge en ligne directe sur une distance égale à la Foulée au maximum pour effectuer une Frappe contre la première créature rencontrée. En cas de réussite, la cible est mise @Condition[prone].</p>",
+                    "description": "<p>Charge en ligne directe sur une distance égale à la <strong>Foulée</strong> au maximum pour effectuer une <strong>Frappe</strong> contre la première créature rencontrée. En cas de réussite, la cible est mise @Condition[prone].</p>",
                     "effects": {
                         "Tusk Charge": {
                             "name": "Charge du sanglier"
@@ -737,7 +737,7 @@
         },
         "corrosiveStrikes": {
             "name": "Frappes corrosives",
-            "description": "<p>Le corps caustique de @ref[actor.name]{la créature} brûle tout ce qu'il touche. Lorsqu'elle réalise un <strong>Coup critique</strong> avec une attaque de mêlée qui inflige des dégâts à la Santé, la cible devient @Condition[corroding] pour 3 rounds.</p>"
+            "description": "<p>Le corps caustique de @ref[actor.name]{la créature} brûle tout ce qu'il touche. Lorsqu'elle réalise un <strong>Coup critique</strong> avec une attaque de mêlée qui inflige des dégâts à la <strong>Santé</strong>, la cible devient @Condition[corroding] pour <strong>3 Rounds</strong>.</p>"
         },
         "crushingLeap0000": {
             "name": "Saut écrasant",
@@ -745,7 +745,7 @@
             "actions": {
                 "crushingLeap": {
                     "name": "Saut écrasant",
-                    "description": "<p>Vous sautez en l'air, atterrissez à un point visible à moins de @[feet 30] et vous vous écrasez au sol avec une force écrasante. Toutes les créatures dans la zone de l'<strong>Explosion</strong> résultante font face à une attaque contre leur <strong>Réflexe</strong>, subissant des dégâts <strong>Contondants</strong> et tombent @Condition[prone]. L'Explosion se propage à partir de votre empreinte, de sorte que les créatures plus grandes s'écrasent sur une zone plus étendue. Cette action est basée sur votre caractéristique la plus haute entre la <strong>Force</strong> et la <strong>Robustesse</strong>.</p>",
+                    "description": "<p>Vous sautez en l'air, atterrissez à un point visible à moins de @[feet 30] et vous vous écrasez au sol avec une force écrasante. Toutes les créatures dans la zone de l'<strong>Explosion</strong> résultante font face à une attaque contre leur <strong>Réflexe</strong>, subissant des dégâts <strong>Contondants</strong> et tombent @Condition[prone]. L'<strong>Explosion</strong> se propage à partir de votre empreinte, de sorte que les créatures plus grandes s'écrasent sur une zone plus étendue. Cette action est basée sur votre caractéristique la plus haute entre la <strong>Force</strong> et la <strong>Robustesse</strong>.</p>",
                     "effects": {
                         "Crushing Leap": {
                             "name": "Saut écrasant"
@@ -760,7 +760,7 @@
             "actions": {
                 "ensnare": {
                     "name": "Piéger",
-                    "description": "<p>@ref[actor.name]{La créature} tente de saisir une unique cible à distance, attaquant son <strong>Réflexe</strong>. Sur une réussite, la cible est tirée à portée et devient @Condition[restrained]. Cette action ne peut être utilisée que sur les créatures qui sont des cibles éligibles pour @Action[Compendium.crucible.talent.Item.unarmedCombatTra grapple].</p><p>L'emprise est maintenue jusqu'à ce que @ref[actor.name]{la créature} la relâche, la cible s'échappe, ou qu'une autre créature soit ciblée avec Piéger.</p>",
+                    "description": "<p>@ref[actor.name]{La créature} tente de saisir une unique cible à distance, attaquant son <strong>Réflexe</strong>. Sur une réussite, la cible est tirée à portée et devient @Condition[restrained]. Cette action ne peut être utilisée que sur les créatures qui sont des cibles éligibles pour @Action[Compendium.crucible.talent.Item.grapple000000000 grapple].</p><p>L'emprise est maintenue jusqu'à ce que @ref[actor.name]{la créature} la relâche, la cible s'échappe, ou qu'une autre créature soit ciblée avec Piéger.</p>",
                     "effects": {
                         "Ensnared": {
                             "name": "Piégé"

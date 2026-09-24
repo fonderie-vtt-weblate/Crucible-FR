@@ -43,7 +43,7 @@
             "actions": {
                 "affixActivating": {
                     "name": "Restauration d'action",
-                    "description": "<p>En cas de difficulté, vous pouvez puiser dans une réserve supplémentaire d'<strong>Actions</strong> depuis cet objet. Le montant d'Actions restauré dépend du <strong>Palier</strong> de cet affixe.</p><ul><li><p><strong>Palier 1 :</strong> <strong>1 Action</strong></p></li><li><p><strong>Palier 2 :</strong> <strong>2 Actions</strong></p></li><li><p><strong>Palier 3 :</strong> <strong>3 Actions</strong></p></li></ul>"
+                    "description": "<p>En cas de difficulté, vous pouvez puiser dans une réserve supplémentaire d'<strong>Actions</strong> depuis cet objet. Le montant d'<strong>Action</strong> restauré dépend du <strong>Palier</strong> de cet affixe.</p><ul><li><p><strong>Palier 1 :</strong> <strong>1 Action</strong></p></li><li><p><strong>Palier 2 :</strong> <strong>2 Actions</strong></p></li><li><p><strong>Palier 3 :</strong> <strong>3 Actions</strong></p></li></ul>"
                 }
             }
         },
@@ -139,7 +139,7 @@
         },
         "controlSpellcraf": {
             "name": "Sorcellerie de contrôle",
-            "description": "<p>Cet objet est imprégné de l'essence de magie de <strong>Contrôle</strong>. En étant équipé, le porteur bénéficie instinctivement d'une connaissance de la rune de <strong>Contrôle</strong>, lui permettant de composer des sorts en l'utilisant, sans l'avoir apprise par l'intermédiaire d'un talent.</p>",
+            "description": "<p>Cet objet est imprégné de l'essence de magie de <strong>Contrôle</strong>. En étant équipé, le porteur bénéficie instinctivement d'une connaissance de la rune de <strong>Contrôle</strong>, lui permettant de composer des sorts en l'utilisant, sans l'avoir apprise par l'intermédiaire d'un talent. Il accorde également <strong>2</strong> points de @UUID[Compendium.crucible.rules.JournalEntry.characterMechani.JournalEntryPage.proficiencies000]{Maîtrise} en <strong>Sorcellerie kinématique</strong>.</p>",
             "adjective": "Contrôle runique"
         },
         "corruptionConv00": {
@@ -169,7 +169,7 @@
         },
         "deathSpellcraft0": {
             "name": "Sorcellerie de la mort",
-            "description": "<p>Cet objet est imprégné de l'essence de magie de <strong>Mort</strong>. En étant équipé, le porteur bénéficie instinctivement d'une connaissance de la rune de la <strong>Mort</strong>, lui permettant de composer des sorts en l'utilisant, sans l'avoir apprise par l'intermédiaire d'un talent.</p>",
+            "description": "<p>Cet objet est imprégné de l'essence de magie de <strong>Mort</strong>. En étant équipé, le porteur bénéficie instinctivement d'une connaissance de la rune de la <strong>Mort</strong>, lui permettant de composer des sorts en l'utilisant, sans l'avoir apprise par l'intermédiaire d'un talent. Il accorde également <strong>2</strong> points de @UUID[Compendium.crucible.rules.JournalEntry.characterMechani.JournalEntryPage.proficiencies000]{Maîtrise} en <strong>Sorcellerie kinématique</strong>.</p>",
             "adjective": "Mort runique"
         },
         "deceptionSkill00": {
@@ -220,7 +220,7 @@
         },
         "earthSpellcraft0": {
             "name": "Sorcellerie de terre",
-            "description": "<p>Cet objet est imprégné de l'essence de magie de <strong>Terre</strong>. En étant équipé, le porteur bénéficie instinctivement d'une connaissance de la rune de <strong>Terre</strong>, lui permettant de composer des sorts en l'utilisant, sans l'avoir apprise par l'intermédiaire d'un talent.</p>",
+            "description": "<p>Cet objet est imprégné de l'essence de magie de <strong>Terre</strong>. En étant équipé, le porteur bénéficie instinctivement d'une connaissance de la rune de <strong>Terre</strong>, lui permettant de composer des sorts en l'utilisant, sans l'avoir apprise par l'intermédiaire d'un talent. Il accorde également <strong>2</strong> points de @UUID[Compendium.crucible.rules.JournalEntry.characterMechani.JournalEntryPage.proficiencies000]{Maîtrise} en <strong>Sorcellerie élémentaire</strong>.</p>",
             "adjective": "Terre runique"
         },
         "electricityConv0": {
@@ -295,7 +295,7 @@
         },
         "flameSpellcraft0": {
             "name": "Sorcellerie de la flamme",
-            "description": "<p>Cet objet est imprégné de l'essence de magie de <strong>Flamme</strong>. En étant équipé, le porteur bénéficie instinctivement d'une connaissance de la rune de la <strong>Flamme</strong>, lui permettant de composer des sorts en l'utilisant, sans l'avoir apprise par l'intermédiaire d'un talent.</p>",
+            "description": "<p>Cet objet est imprégné de l'essence de magie de <strong>Flamme</strong>. En étant équipé, le porteur bénéficie instinctivement d'une connaissance de la rune de la <strong>Flamme</strong>, lui permettant de composer des sorts en l'utilisant, sans l'avoir apprise par l'intermédiaire d'un talent. Il accorde également <strong>2</strong> points de @UUID[Compendium.crucible.rules.JournalEntry.characterMechani.JournalEntryPage.proficiencies000]{Maîtrise} en <strong>Sorcellerie élémentaire</strong>.</p>",
             "adjective": "Flamme runique"
         },
         "focusing00000000": {
@@ -305,7 +305,7 @@
             "actions": {
                 "affixFocusing": {
                     "name": "Restauration de focus",
-                    "description": "<p>En cas de difficulté, vous pouvez puiser dans une réserve supplémentaire de <strong>Focus</strong> depuis cet objet. Le montant de Focus restauré dépend du <strong>Palier</strong> de ce préfixe.</p><ul><li><p><strong>Palier 1 :</strong> <strong>4 Focus</strong></p></li><li><p><strong>Palier 2 :</strong> <strong>6 Focus</strong></p></li><li><p><strong>Palier 3 :</strong> <strong>8 Focus</strong></p></li></ul>"
+                    "description": "<p>En cas de difficulté, vous pouvez puiser dans une réserve supplémentaire de <strong>Focus</strong> depuis cet objet. Le montant de <strong>Focus</strong> restauré dépend du <strong>Palier</strong> de ce préfixe.</p><ul><li><p><strong>Palier 1 :</strong> <strong>4 Focus</strong></p></li><li><p><strong>Palier 2 :</strong> <strong>6 Focus</strong></p></li><li><p><strong>Palier 3 :</strong> <strong>8 Focus</strong></p></li></ul>"
                 }
             }
         },
@@ -316,7 +316,7 @@
         },
         "frostSpellcraft0": {
             "name": "Sorcellerie du givre",
-            "description": "<p>Cet objet est imprégné de l'essence de magie de <strong>Givre</strong>. En étant équipé, le porteur bénéficie instinctivement d'une connaissance de la rune du <strong>Givre</strong>, lui permettant de composer des sorts en l'utilisant, sans l'avoir apprise par l'intermédiaire d'un talent.</p>",
+            "description": "<p>Cet objet est imprégné de l'essence de magie de <strong>Givre</strong>. En étant équipé, le porteur bénéficie instinctivement d'une connaissance de la rune du <strong>Givre</strong>, lui permettant de composer des sorts en l'utilisant, sans l'avoir apprise par l'intermédiaire d'un talent. Il accorde également <strong>2</strong> points de @UUID[Compendium.crucible.rules.JournalEntry.characterMechani.JournalEntryPage.proficiencies000]{Maîtrise} en <strong>Sorcellerie élémentaire</strong>.</p>",
             "adjective": "Givre runique"
         },
         "giantBane0000000": {
@@ -352,7 +352,7 @@
         },
         "illuminationSpel": {
             "name": "Sorcellerie d'illumination",
-            "description": "<p>Cet objet est imprégné de l'essence de magie d'<strong>Illumination</strong>. En étant équipé, le porteur bénéficie instinctivement d'une connaissance de la rune de l'<strong>Illumination</strong>, lui permettant de composer des sorts en l'utilisant, sans l'avoir apprise par l'intermédiaire d'un talent.</p>",
+            "description": "<p>Cet objet est imprégné de l'essence de magie d'<strong>Illumination</strong>. En étant équipé, le porteur bénéficie instinctivement d'une connaissance de la rune de l'<strong>Illumination</strong>, lui permettant de composer des sorts en l'utilisant, sans l'avoir apprise par l'intermédiaire d'un talent. Il accorde également <strong>2</strong> points de @UUID[Compendium.crucible.rules.JournalEntry.characterMechani.JournalEntryPage.proficiencies000]{Maîtrise} en <strong>Sorcellerie spirituelle</strong>.</p>",
             "adjective": "Illumination runique"
         },
         "illusionPtcy0000": {
@@ -362,7 +362,7 @@
         },
         "illusionSpellcra": {
             "name": "Sorcellerie d'illusion",
-            "description": "<p>Cet objet est imprégné de l'essence de magie d'<strong>Illusion</strong>. En étant équipé, le porteur bénéficie instinctivement d'une connaissance de la rune de l'<strong>Illusion</strong>, lui permettant de composer des sorts en l'utilisant, sans l'avoir apprise par l'intermédiaire d'un talent.</p>",
+            "description": "<p>Cet objet est imprégné de l'essence de magie d'<strong>Illusion</strong>. En étant équipé, le porteur bénéficie instinctivement d'une connaissance de la rune de l'<strong>Illusion</strong>, lui permettant de composer des sorts en l'utilisant, sans l'avoir apprise par l'intermédiaire d'un talent. Il accorde également <strong>2</strong> points de @UUID[Compendium.crucible.rules.JournalEntry.characterMechani.JournalEntryPage.proficiencies000]{Maîtrise} en <strong>Sorcellerie spirituelle</strong>.</p>",
             "adjective": "Illusion runique"
         },
         "influenceSpellcr": {
@@ -372,7 +372,7 @@
         },
         "keen000000000000": {
             "name": "Aiguisée",
-            "description": "<p>Reduit le <strong>Seuil de critique</strong> nécessaire pour obtenir un <strong>Coup critique</strong> sur une Frappe réussie. Ce seuil est réduit de 1 pour chaque <strong>Palier</strong> de cet affixe.</p>",
+            "description": "<p>Reduit le <strong>Seuil de critique</strong> nécessaire pour obtenir un <strong>Coup critique</strong> sur une <strong>Frappe</strong> réussie. Ce seuil est réduit de 1 pour chaque <strong>Palier</strong> de cet affixe.</p>",
             "adjective": "Aiguisée"
         },
         "kinesisPtcy00000": {
@@ -382,7 +382,7 @@
         },
         "kinesisSpellcraf": {
             "name": "Sorcellerie de kinésie",
-            "description": "<p>Cet objet est imprégné de l'essence de magie de <strong>Kinésie</strong>. En étant équipé, le porteur bénéficie instinctivement d'une connaissance de la rune de <strong>Kinésie</strong>, lui permettant de composer des sorts en l'utilisant, sans l'avoir apprise par l'intermédiaire d'un talent.</p>",
+            "description": "<p>Cet objet est imprégné de l'essence de magie de <strong>Kinésie</strong>. En étant équipé, le porteur bénéficie instinctivement d'une connaissance de la rune de <strong>Kinésie</strong>, lui permettant de composer des sorts en l'utilisant, sans l'avoir apprise par l'intermédiaire d'un talent. Il accorde également <strong>2</strong> points de @UUID[Compendium.crucible.rules.JournalEntry.characterMechani.JournalEntryPage.proficiencies000]{Maîtrise} en <strong>Sorcellerie kinématique</strong>.</p>",
             "adjective": "Kinésie runique"
         },
         "lifePtcy00000000": {
@@ -392,12 +392,12 @@
         },
         "lifeSpellcraft00": {
             "name": "Sorcellerie de vie",
-            "description": "<p>Cet objet est imprégné de l'essence de magie de <strong>Vie</strong>. En étant équipé, le porteur bénéficie instinctivement d'une connaissance de la rune de <strong>Vie</strong>, lui permettant de composer des sorts en l'utilisant, sans l'avoir apprise par l'intermédiaire d'un talent.</p>",
+            "description": "<p>Cet objet est imprégné de l'essence de magie de <strong>Vie</strong>. En étant équipé, le porteur bénéficie instinctivement d'une connaissance de la rune de <strong>Vie</strong>, lui permettant de composer des sorts en l'utilisant, sans l'avoir apprise par l'intermédiaire d'un talent. Il accorde également <strong>2</strong> points de @UUID[Compendium.crucible.rules.JournalEntry.characterMechani.JournalEntryPage.proficiencies000]{Maîtrise} en <strong>Sorcellerie kinématique</strong>.</p>",
             "adjective": "Vie runique"
         },
         "luminary00000000": {
             "name": "Astre",
-            "description": "<p>Obtient des Faveurs pour les actions <strong>Composées</strong> qui incluent une <strong>Inflexion</strong>. Le nombre de faveurs obtenues est égal au <strong>Palier</strong> de ce préfixe. Un seul Affixe peut prodiguer ce bénéfice.</p>",
+            "description": "<p>Obtient des Faveurs pour les actions <strong>Composées</strong> qui incluent une <strong>Inflexion</strong>. Le nombre de faveurs obtenues est égal au <strong>Palier</strong> de ce préfixe. Un seul <strong>Affixe</strong> peut prodiguer ce bénéfice.</p>",
             "adjective": "Astral"
         },
         "luminous00000000": {
@@ -438,7 +438,7 @@
         },
         "nonchalant000000": {
             "name": "Nonchalant",
-            "description": "<p>Les Frappes contre votre <strong>Moral</strong> nécessitent un surplus important pour accomplir un <strong>Coup critique</strong>. Le seuil de critique est augmenté de 1 pour chaque <strong>Palier</strong> de ce préfixe.</p>",
+            "description": "<p>Les <strong>Frappes</strong> contre votre <strong>Moral</strong> nécessitent un surplus important pour accomplir un <strong>Coup critique</strong>. Le seuil de critique est augmenté de 1 pour chaque <strong>Palier</strong> de ce préfixe.</p>",
             "adjective": "Nonchalant"
         },
         "oblivionPtcy0000": {
@@ -448,7 +448,7 @@
         },
         "oblivionSpellcra": {
             "name": "Sorcellerie du néant",
-            "description": "<p>Cet objet est imprégné de l'essence de magie du <strong>Néant</strong>. En étant équipé, le porteur bénéficie instinctivement d'une connaissance de la rune du <strong>Néant</strong>, lui permettant de composer des sorts en l'utilisant, sans l'avoir apprise par l'intermédiaire d'un talent.</p>",
+            "description": "<p>Cet objet est imprégné de l'essence de magie du <strong>Néant</strong>. En étant équipé, le porteur bénéficie instinctivement d'une connaissance de la rune du <strong>Néant</strong>, lui permettant de composer des sorts en l'utilisant, sans l'avoir apprise par l'intermédiaire d'un talent. Il accorde également <strong>2</strong> points de @UUID[Compendium.crucible.rules.JournalEntry.characterMechani.JournalEntryPage.proficiencies000]{Maîtrise} en <strong>Sorcellerie spirituelle</strong>.</p>",
             "adjective": "Néant runique"
         },
         "oozeBane00000000": {
@@ -548,7 +548,7 @@
         },
         "reach00000000000": {
             "name": "Portée",
-            "description": "<p>Augmente la portée effective de cette arme. Les armes de mêlée obtiennent <strong>+1 de portée par Palier</strong>. Les armes à distance obtiennent <strong>+10 de portée par Palier</strong>.</p>",
+            "description": "<p>Augmente la portée effective de cette arme. Les armes de <strong>Mêlée</strong> obtiennent <strong>+1 de portée par Palier</strong>. Les armes à <strong>Distance</strong> obtiennent <strong>+10 de portée par Palier</strong>.</p>",
             "adjective": "Allongé"
         },
         "reinforcement000": {
@@ -598,7 +598,7 @@
         },
         "soulSpellcraft00": {
             "name": "Sorcellerie d'âme",
-            "description": "<p>Cet objet est imprégné de l'essence de magie de l'<strong>Âme</strong>. En étant équipé, le porteur bénéficie instinctivement d'une connaissance de la rune de l'<strong>Âme</strong>, lui permettant de composer des sorts en l'utilisant, sans l'avoir apprise par l'intermédiaire d'un talent.</p>",
+            "description": "<p>Cet objet est imprégné de l'essence de magie de l'<strong>Âme</strong>. En étant équipé, le porteur bénéficie instinctivement d'une connaissance de la rune de l'<strong>Âme</strong>, lui permettant de composer des sorts en l'utilisant, sans l'avoir apprise par l'intermédiaire d'un talent. Il accorde également <strong>2</strong> points de @UUID[Compendium.crucible.rules.JournalEntry.characterMechani.JournalEntryPage.proficiencies000]{Maîtrise} en <strong>Sorcellerie spirituelle</strong>.</p>",
             "adjective": "Âme runique"
         },
         "spirited00000000": {
@@ -638,7 +638,7 @@
         },
         "unshakeable00000": {
             "name": "Indéfectible",
-            "description": "<p>Les Frappes contre votre <strong>Santé</strong> nécessitent un surplus important pour accomplir un <strong>Coup critique</strong>. Le seuil de critique est augmenté de 1 pour chaque <strong>Palier</strong> de ce préfixe.</p>",
+            "description": "<p>Les <strong>Frappes</strong> contre votre <strong>Santé</strong> nécessitent un surplus important pour accomplir un <strong>Coup critique</strong>. Le seuil de critique est augmenté de 1 pour chaque <strong>Palier</strong> de ce préfixe.</p>",
             "adjective": "Indéfectible"
         },
         "voidConv00000000": {
@@ -663,7 +663,7 @@
         },
         "weaponPotency000": {
             "name": "Puissance",
-            "description": "<p>Ajoute un <strong>Bonus d'enchantement</strong> à toutes les Frappes utilisant cette arme en fonction du <strong>Palier</strong> de cet affixe.</p>",
+            "description": "<p>Ajoute un <strong>Bonus d'enchantement</strong> à toutes les <strong>Frappes</strong> utilisant cette arme en fonction du <strong>Palier</strong> de cet affixe.</p>",
             "adjective": "Puissant"
         },
         "wildernessSkill0": {
@@ -728,12 +728,12 @@
         },
         "stormSpellcraft0": {
             "name": "Sorcellerie de l'orage",
-            "description": "<p>Cet objet est imprégné de l'essence de sorcellerie de l'<strong>Orage</strong>. En étant équipé, le porteur bénéficie instinctivement d'une connaissance de la rune d' <strong>Orage</strong>, lui permettant de composer des sorts en l'utilisant, sans l'avoir apprise par l'intermédiaire d'un talent.</p>",
+            "description": "<p>Cet objet est imprégné de l'essence de sorcellerie de l'<strong>Orage</strong>. En étant équipé, le porteur bénéficie instinctivement d'une connaissance de la rune d' <strong>Orage</strong>, lui permettant de composer des sorts en l'utilisant, sans l'avoir apprise par l'intermédiaire d'un talent. Il accorde également <strong>2</strong> points de @UUID[Compendium.crucible.rules.JournalEntry.characterMechani.JournalEntryPage.proficiencies000]{Maîtrise} en <strong>Sorcellerie élémentaire</strong>.</p>",
             "adjective": "Orage runique"
         },
         "vicious000000000": {
             "name": "Vicieuse",
-            "description": "<p>Une Frappe qui obtient un <strong>Coup critique</strong> avec cette arme exploite brutalement la blessure.</p><ul><li><p>Les armes qui infligent des dégâts <strong>Perforants</strong> ou <strong>Tranchants</strong> amènent la cible à se retrouver @Condition[bleeding].</p></li><li><p>Les armes qui infligent des dégâts <strong>Contondants</strong> amènent la cible à se retrouver @Condition[staggered].</p></li></ul>",
+            "description": "<p>Une <strong>Frappe</strong> qui obtient un <strong>Coup critique</strong> avec cette arme exploite brutalement la blessure.</p><ul><li><p>Les armes qui infligent des dégâts <strong>Perforants</strong> ou <strong>Tranchants</strong> amènent la cible à se retrouver @Condition[bleeding].</p></li><li><p>Les armes qui infligent des dégâts <strong>Contondants</strong> amènent la cible à se retrouver @Condition[staggered].</p></li></ul>",
             "adjective": "Vicieuse"
         }
     }

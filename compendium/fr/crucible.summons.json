@@ -15,17 +15,23 @@
                 "EBS39VwHFZ4jvcMK": {
                     "name": "Griffes osseuses"
                 },
-                "runedeath0000000": {
-                    "name": "Rune : Mort",
-                    "description": "Vous apprenez la Rune de Mort, vous permettant de manipuler une puissance impie."
-                },
                 "gesturefan000000": {
                     "name": "Signe : Éventail",
-                    "description": "Vous apprenez le signe Éventail, vous permettant de projeter une puissance arcanique dans un arc limité."
+                    "description": "<p>Vous façonnez l'essence d'une <strong>Rune</strong> en un arc ample ou fragmenté pour frapper plusieurs cibles à proximité immédiate.</p><p>Le signe <strong>Éventail</strong> est basé sur l'<strong>Intellect</strong> et cible un arc de 120 degrés avec un rayon de <strong>@[feet 6]</strong>. Il inflige <strong>6 dégâts de base</strong> aux cibles qui échouent à résister au sort. Ce signe nécessite <strong>1 Main</strong> pour le lancer et a un coût de base de <strong>3 Action</strong> et <strong>1 Focus</strong>.</p>"
                 },
                 "falseAppearance0": {
                     "name": "Faux-semblant",
                     "description": "<p>Tant qu'elle reste immobile, la @ref[actor.name]{créature} est indiscernable d'un autre objet ou matériau.</p>"
+                },
+                "runeDeath0000000": {
+                    "name": "Rune : Mort",
+                    "description": "<p>La force ordonnée de la destruction, responsable de la corruption de toute matière biologique. La Rune de <strong>Mort</strong> gouverne la pourriture et la destruction.</p><p>La Rune de <strong>Mort</strong> est basée sur la <strong>Présence</strong>, cible la <strong>Fortitude</strong>, et inflige des dégâts de <strong>Corruption</strong> à la <strong>Santé</strong>. Elle est opposée par la rune chaotique de <strong>Vie</strong>.</p>",
+                    "actions": {
+                        "ennervate": {
+                            "name": "Affaiblir",
+                            "description": "<p>Votre maîtrise de la Rune de Mort permet une communion basique avec les morts et une manipulation rudimentaire des forces impies, produisant l'un des effets suivants :</p><ul><li><p>Répandre la corruption sur un objet qui n'est pas plus large qu'un cube de @[feet 1] d'arête, provoquant le flétrissement des plantes, la rouille des objets métalliques, la pourriture du bois, la détérioration des aliments ou la décomposition rapide d'un cadavre. Les objets magiques ne sont généralement pas affectés.</p></li><li><p>Faire en sorte qu'un cadavre mort depuis moins de sept jours ou autrement conservé exécute une reconstitution de ses derniers instants. Ses mouvements imitent ceux qui se sont produits durant les 30 dernières secondes de la vie de la créature. Vous n'avez aucun contrôle sur la créature et elle ne peut communiquer d'aucune autre manière.</p></li><li><p>Hâter la mort d'une créature consentante qui est en train de mourir, en lui offrant un décès rapide et paisible.</p></li></ul><p>Affaiblir ne peut affecter qu'une créature ou un objet que vous pouvez toucher physiquement. Vous pouvez tenter d'autres utilisations similaires à celles données ci-dessus, leur efficacité étant décidée par le Maître du jeu.</p>"
+                        }
+                    }
                 }
             },
             "archetype": {
@@ -41,17 +47,13 @@
         "AlwoqQKoL1BnnZjd": {
             "name": "Visiteur de Flamme",
             "items": {
-                "runeflame0000000": {
-                    "name": "Rune : Flamme",
-                    "description": "<p>La force chaotique élémentaire, l'énergie thermique. La rune de Flamme régit le feu et la chaleur. Elle est opposée à la rune ordonnée du Givre.</p>\n<p>La rune de Flamme est basée sur l'<strong>Intellect</strong>, cible le <strong>Réflexe</strong>, et inflige des dégâts de <strong>Feu</strong> à la <strong>Santé</strong>.</p>"
-                },
                 "fireAbsorption00": {
                     "name": "Absorption de Feu",
                     "description": "<p>La @ref[actor.name]{créature} possède une capacité exceptionnelle à prospérer dans des environnements brûlants. Sa résistance au <strong>Feu</strong> est doublée et si cette résistance réduit une quantité de dégâts en dessous de zéro, le montant négatif est reçu comme <strong>Guérison</strong> à la place.</p>"
                 },
                 "gesturefan000000": {
                     "name": "Signe : Éventail",
-                    "description": "<p>Canalisez l'essence d'une rune en un arc balayant ou éclaté pour frapper plusieurs cibles à proximité immédiate. Utilisé avec la Terre, cela peut projeter une gerbe de pierres en arc de cercle, tandis qu'avec la Kinésie, cela peut trancher plusieurs ennemis d'un coup.</p><p>Le signe Éventail dépend de l'<strong>Intellect</strong> et cible un cône de 120 degrés sur @[feet 6], infligeant 6 dégâts de base en cas d'attaque réussie.</p>"
+                    "description": "<p>Vous façonnez l'essence d'une <strong>Rune</strong> en un arc ample ou fragmenté pour frapper plusieurs cibles à proximité immédiate.</p><p>Le signe <strong>Éventail</strong> est basé sur l'<strong>Intellect</strong> et cible un arc de 120 degrés avec un rayon de <strong>@[feet 6]</strong>. Il inflige <strong>6 dégâts de base</strong> aux cibles qui échouent à résister au sort. Ce signe nécessite <strong>1 Main</strong> pour le lancer et a un coût de base de <strong>3 Action</strong> et <strong>1 Focus</strong>.</p>"
                 },
                 "n9O5nEIhY2OgZFsO": {
                     "name": "Armure élémentaire"
@@ -61,7 +63,17 @@
                 },
                 "gestureaspect000": {
                     "name": "Signe : Aspect",
-                    "description": "<p>Vous infusez l'essence d'une Rune dans votre corps, renforçant votre propre forme physique ou psyché.</p><p>Lorsque vous assumez un certain Aspect, vous devenez plus étroitement harmonisé avec le type de dégâts de la Rune utilisée dans votre sort. Vous gagnez <strong>+2 Résistance</strong> à ce type de dégâts, et infligez <strong>+2 Dégâts</strong> supplémentaires lorsque vous infligez des dégâts de ce type.</p><p>Votre Aspect dure <strong>6 Rounds</strong>. Vous ne pouvez avoir qu'un seul Aspect actif, lancer un autre sort utilisant le signe d'Aspect remplace l'effet précédent.</p>"
+                    "description": "<p>Vous infusez l'essence d'une <strong>Rune</strong> dans votre corps, renforçant votre propre forme physique ou psyché.</p><p>Lorsque vous assumez un certain <strong>Aspect</strong>, vous devenez plus étroitement harmonisé avec le type de dégâts de la <strong>Rune</strong> utilisée dans votre sort. Vous gagnez <strong>+2 Résistance</strong> à ce type de dégâts, et infligez <strong>+2 Dégâts</strong> supplémentaires lorsque vous infligez des dégâts de ce type.</p><p>Votre <strong>Aspect</strong> dure <strong>6 Rounds</strong>. Vous ne pouvez avoir qu'un seul <strong>Aspect</strong> actif ; lancer un autre sort utilisant le signe <strong>Aspect</strong> remplace l'effet précédent. Ce signe nécessite <strong>1 Main</strong> pour le lancer et a un coût de base de <strong>2 Action</strong> et <strong>1 Focus</strong>.</p>"
+                },
+                "runeFlame0000000": {
+                    "name": "Rune : Flamme",
+                    "description": "<p>La force chaotique de l'énergie élémentaire et thermique. La Rune de <strong>Flamme</strong> gouverne le feu et la chaleur.</p><p>La Rune de <strong>Flamme</strong> est basée sur l'<strong>Intellect</strong>, cible le <strong>Réflexe</strong>, et inflige des dégâts de <strong>Feu</strong> à la <strong>Santé</strong>. Elle est opposée par la rune ordonnée de <strong>Givre</strong>.</p>",
+                    "actions": {
+                        "enkindle": {
+                            "name": "Allumer",
+                            "description": "<p>Votre maîtrise de la Rune de Flamme vous permet de manipuler le feu et les énergies thermales de manière créative, produisant l'un des effets suivants :</p><ul><li><p>Manifester une explosion de flamme élémentaire dans une sphère d'un pouce capable d'enflammer une bougie, une torche ou d'autres matériaux inflammables.</p></li><li><p>Imprégner votre corps d'une protection thermique momentanée qui vous immunise contre les dégâts de feu lors d'une action immédiatement suivante coûtant <strong>1 Action</strong> ou moins.</p></li><li><p>Contrôler le mouvement des flammes dans une petite zone, en les faisant vaciller, danser ou se déplacer en un spectacle animé de lumière et d'ombre.</p></li></ul><p>Allumer ne peut affecter qu'une créature ou un objet que vous pouvez toucher physiquement. Vous pouvez tenter d'autres utilisations similaires à celles données ci-dessus, leur efficacité étant décidée par le Maître du jeu.</p>"
+                        }
+                    }
                 }
             },
             "archetype": {
@@ -83,7 +95,7 @@
                 },
                 "gesturefan000000": {
                     "name": "Signe : Éventail",
-                    "description": "<p>Canalisez l'essence d'une rune en un arc balayant ou éclaté pour frapper plusieurs cibles à proximité immédiate. Utilisé avec la Terre, cela peut projeter une gerbe de pierres en arc de cercle, tandis qu'avec la Kinésie, cela peut trancher plusieurs ennemis d'un coup.</p><p>Le signe Éventail dépend de l'<strong>Intellect</strong> et cible un cône de 120 degrés sur @[feet 6], infligeant 6 dégâts de base en cas d'attaque réussie.</p>"
+                    "description": "<p>Vous façonnez l'essence d'une <strong>Rune</strong> en un arc ample ou fragmenté pour frapper plusieurs cibles à proximité immédiate.</p><p>Le signe <strong>Éventail</strong> est basé sur l'<strong>Intellect</strong> et cible un arc de 120 degrés avec un rayon de <strong>@[feet 6]</strong>. Il inflige <strong>6 dégâts de base</strong> aux cibles qui échouent à résister au sort. Ce signe nécessite <strong>1 Main</strong> pour le lancer et a un coût de base de <strong>3 Action</strong> et <strong>1 Focus</strong>.</p>"
                 },
                 "feNVndyyNP8lNnqr": {
                     "name": "Griffe Voltaïque"
@@ -93,11 +105,17 @@
                 },
                 "gestureaspect000": {
                     "name": "Signe : Aspect",
-                    "description": "<p>Vous infusez l'essence d'une Rune dans votre corps, renforçant votre propre forme physique ou psyché.</p><p>Lorsque vous assumez un certain Aspect, vous devenez plus étroitement harmonisé avec le type de dégâts de la Rune utilisée dans votre sort. Vous gagnez <strong>+2 Résistance</strong> à ce type de dégâts, et infligez <strong>+2 Dégâts</strong> supplémentaires lorsque vous infligez des dégâts de ce type.</p><p>Votre Aspect dure <strong>6 Rounds</strong>. Vous ne pouvez avoir qu'un seul Aspect actif, lancer un autre sort utilisant le signe d'Aspect remplace l'effet précédent.</p>"
+                    "description": "<p>Vous infusez l'essence d'une <strong>Rune</strong> dans votre corps, renforçant votre propre forme physique ou psyché.</p><p>Lorsque vous assumez un certain <strong>Aspect</strong>, vous devenez plus étroitement harmonisé avec le type de dégâts de la <strong>Rune</strong> utilisée dans votre sort. Vous gagnez <strong>+2 Résistance</strong> à ce type de dégâts, et infligez <strong>+2 Dégâts</strong> supplémentaires lorsque vous infligez des dégâts de ce type.</p><p>Votre <strong>Aspect</strong> dure <strong>6 Rounds</strong>. Vous ne pouvez avoir qu'un seul <strong>Aspect</strong> actif ; lancer un autre sort utilisant le signe <strong>Aspect</strong> remplace l'effet précédent. Ce signe nécessite <strong>1 Main</strong> pour le lancer et a un coût de base de <strong>2 Action</strong> et <strong>1 Focus</strong>.</p>"
                 },
                 "runeStorm0000000": {
                     "name": "Rune : Orage",
-                    "description": "<p>La force chaotique de l'énergie électrique brute. La rune d'Orage gouverne les sources d'énergie électrique et de décharge électrique. Elle est opposée par la rune ordonnée de Terre.</p>\n<p>La rune d'Orage évolue avec l'<strong>Intellect</strong>, cible le <strong>Réflexe</strong>, et inflige des dégâts <strong>Électriques</strong> à la <strong>Santé</strong>.</p>"
+                    "description": "<p>La force chaotique de l'énergie électrique brute. La rune d'<strong>Orage</strong> gouverne les sources de charge et de décharge électrique. </p><p>La rune d'<strong>Orage</strong> est basée sur l'<strong>Intellect</strong>, cible le <strong>Réflexe</strong>, et inflige des dégâts <strong>Électriques</strong> à la <strong>Santé</strong>. Elle est opposée par la rune ordonnée de <strong>Terre</strong>.</p>",
+                    "actions": {
+                        "energize": {
+                            "name": "Dynamiser",
+                            "description": "<p>Votre maîtrise de la Rune d'Orage vous permet de conduire le flux d'air et d'électricité, en manipulant la charge et l'aérodynamisme pour produire l'un des effets suivants :</p><ul><li><p>Imprégner un objet métallique que vous touchez, d'une taille maximale d'un pied cube, d'une charge électromagnétique, ce qui le rendra fortement adhérent à d'autres métaux. Un seul objet peut être chargé de cette manière à la fois, lancer ce sort sur un autre objet entraîne la perte de l'effet magnétique du premier.</p></li><li><p>Rassembler une bourrasque de vent à votre emplacement actuel dans un rayon de six pieds, soufflant soit sous forme de rafale dans une seule direction contrôlée, soit sous forme de cyclone avec une force centripète dans toutes les directions. Les effets aériens dans la zone immédiate sont dispersés et les objets non fixés d'un poids inférieur à 1 livre sont projetés dans la direction de la rafale.</p></li><li><p>Produire le bruit sec d'un coup de tonnerre à un endroit que vous pouvez voir à moins de @[feet 15] de votre position actuelle.</p></li></ul><p>Dynamiser ne peut affecter qu'une créature ou un objet que vous pouvez toucher physiquement. Vous pouvez tenter d'autres utilisations similaires à celles données ci-dessus, leur efficacité étant décidée par le Maître du jeu.</p>"
+                        }
+                    }
                 }
             },
             "archetype": {
@@ -119,13 +137,9 @@
                 "7RSTMS2y9bqVGtgb": {
                     "name": "Griffe Glacée"
                 },
-                "runefrost0000000": {
-                    "name": "Rune : Givre",
-                    "description": "Vous apprenez la Rune de Givre, vous permettant de canaliser l'élément arcanique de la glace."
-                },
                 "gestureinfluence": {
                     "name": "Signe : Influence",
-                    "description": "<p>Vous apprenez le signe Influence, vous permettant d'intensifier ou de diminuer un phénomène arcanique à courte portée.</p>\n<p>Le signe d'Influence est une évolution plus puissante du signe Contact, infligeant plus de dégâts ou de soins, mais nécessitant 2 Actions pour être exécuté.</p>"
+                    "description": "<p>Vous intensifiez la puissance arcanique d'une <strong>Rune</strong> en un contact direct concentré qui est généralement une évolution plus puissante du signe <strong>Contact</strong> de base.</p><p>Le signe <strong>Influence</strong> est basé sur la <strong>Présence</strong> et cible une créature adjacente unique. Il inflige <strong>10 Dégâts de Base</strong> aux cibles qui échouent à résister au sort. Ce signe nécessite <strong>1 Main</strong> pour le lancer et a un coût de base de <strong>3 Action</strong> et <strong>1 Focus</strong>.</p>"
                 },
                 "coldAbsorption00": {
                     "name": "Absorption de Froid",
@@ -133,15 +147,15 @@
                 },
                 "amorphous0000000": {
                     "name": "Informe",
-                    "description": "<p>La @ref[actor.name]{créature} peut se déplacer à travers un espace aussi étroit que 1 pouce de diamètre sans aucune pénalité à sa <strong>Foulée</strong>. Elle est immunisée contre la condition @Condition[restrained].</p>"
+                    "description": "<p>La @ref[actor.name]{créature} peut se déplacer à travers un espace aussi étroit que 1 pouce de diamètre sans aucune pénalité à sa <strong>Foulée</strong>. Elle obtient un bonus à l'<strong>Esquive</strong> égal à la moitié de son score de <strong>Robustesse</strong> et est immunisée à la condition @Condition[restrained].</p>"
                 },
                 "aqueousTransmiss": {
                     "name": "Transmission aqueuse",
-                    "description": "<p>La @ref[name] est capable de se déplacer instantanément à travers l'eau.</p>",
+                    "description": "<p>La @ref[actor.name]{créature} est capable de se déplacer instantanément à travers l'eau.</p>",
                     "actions": {
                         "aqueousTransmission": {
                             "name": "Transmission aqueuse",
-                            "description": "<p>Lorsque la @ref[name] est dans l'eau, elle peut se transporter instantanément vers n'importe quel espace inoccupé dans la même étendue d'eau jusqu'à @[feet 120] de distance. Elle n'a pas besoin de voir la destination pour effectuer ce <strong>Déplacement</strong>.</p>"
+                            "description": "<p>Lorsque la @ref[actor.name]{créature} est dans l'eau, elle peut se transporter instantanément vers n'importe quel espace inoccupé dans la même étendue d'eau jusqu'à @[feet 120] de distance. Elle n'a pas besoin de voir la destination pour effectuer ce <strong>Déplacement</strong>.</p>"
                         }
                     }
                 },
@@ -151,7 +165,17 @@
                 },
                 "gesturefan000000": {
                     "name": "Signe : Éventail",
-                    "description": "<p>Canalisez l'essence d'une rune en un arc balayant ou éclaté pour frapper plusieurs cibles à proximité immédiate. Utilisé avec la Terre, cela peut projeter une gerbe de pierres en arc de cercle, tandis qu'avec la Kinésie, cela peut trancher plusieurs ennemis d'un coup.</p><p>Le signe Éventail dépend de l'<strong>Intellect</strong> et cible un cône de 120 degrés sur @[feet 6], infligeant 6 dégâts de base en cas d'attaque réussie.</p>"
+                    "description": "<p>Vous façonnez l'essence d'une <strong>Rune</strong> en un arc ample ou fragmenté pour frapper plusieurs cibles à proximité immédiate.</p><p>Le signe <strong>Éventail</strong> est basé sur l'<strong>Intellect</strong> et cible un arc de 120 degrés avec un rayon de <strong>@[feet 6]</strong>. Il inflige <strong>6 dégâts de base</strong> aux cibles qui échouent à résister au sort. Ce signe nécessite <strong>1 Main</strong> pour le lancer et a un coût de base de <strong>3 Action</strong> et <strong>1 Focus</strong>.</p>"
+                },
+                "runeFrost0000000": {
+                    "name": "Rune : Givre",
+                    "description": "<p>La force ordonnée de l'eau et du froid. La Rune de <strong>Givre</strong> gouverne la création d'eau ou d'autres fluides et leur transfert entre les états liquide et gelé.</p><p>La Rune de <strong>Givre</strong> est basée sur la <strong>Sagesse</strong>, cible la <strong>Fortitude</strong>, et inflige des dégâts de <strong>Froid</strong> à la <strong>Santé</strong>. Elle est opposée par la rune chaotique de <strong>Flamme</strong>.</p>",
+                    "actions": {
+                        "condense": {
+                            "name": "Condenser",
+                            "description": "<p>Votre maîtrise de la Rune de Givre vous permet de manipuler les liquides et leurs propriétés thermales, produisant l'un des effets suivants :</p><ul><li><p>Aspirer jusqu'à un litre d'eau douce de l'atmosphère dans un récipient ou sur une surface que vous touchez. L'eau créée peut être affectée par les propriétés atmosphériques dépendantes de votre emplacement actuel.</p></li><li><p>Modifier la température d'un volume d'eau allant jusqu'à 1 gallon (4 L), provoquant un gel ou un dégel immédiat. L'eau n'a pas besoin d'être dans un récipient ; Cette technique peut être utilisée pour recouvrir une surface ou assembler deux objets par congélation. La glace ainsi créée reste gelée aussi longtemps que la température ambiante le permet.</p></li><li><p>Ramasser un cube de neige de @[feet 6] d'arrête environ pour en faire une sculpture, une forme ou un abri solidifié.</p></li></ul><p>Condenser ne peut affecter qu'une créature ou un objet que vous pouvez toucher physiquement. Vous pouvez tenter d'autres utilisations similaires à celles données ci-dessus, leur efficacité étant décidée par le Maître du jeu.</p>"
+                        }
+                    }
                 }
             },
             "archetype": {
@@ -173,25 +197,21 @@
                 },
                 "amorphous0000000": {
                     "name": "Informe",
-                    "description": "<p>La @ref[actor.name]{créature} peut se déplacer à travers un espace aussi étroit que 1 pouce de diamètre sans aucune pénalité à sa <strong>Foulée</strong>. Elle est immunisée contre la condition @Condition[restrained].</p>"
-                },
-                "runefrost0000000": {
-                    "name": "Rune : Givre",
-                    "description": "<p>La force ordonnée élémentaire, l'énergie thermique. La rune de Givre régit la glace et le froid. Elle est opposée à la rune chaotique de Flamme.</p>\n<p>La rune de Givre est basée sur la <strong>Sagesse</strong>, cible la <strong>Fortitude</strong>, et inflige des dégâts de <strong>Froid</strong> à la <strong>Santé</strong>.</p>"
+                    "description": "<p>La @ref[actor.name]{créature} peut se déplacer à travers un espace aussi étroit que 1 pouce de diamètre sans aucune pénalité à sa <strong>Foulée</strong>. Elle gagne un bonus à l'<strong>Esquive</strong> égal à la moitié de son score de <strong>Robustesse</strong> et est immunisée à la condition @Condition[restrained].</p>"
                 },
                 "aqueousTransmiss": {
                     "name": "Transmission aqueuse",
-                    "description": "<p>La @ref[name] est capable de se déplacer instantanément à travers l'eau.</p>",
+                    "description": "<p>La @ref[actor.name]{créature} est capable de se déplacer instantanément à travers l'eau.</p>",
                     "actions": {
                         "aqueousTransmission": {
                             "name": "Transmission aqueuse",
-                            "description": "<p>Lorsque la @ref[name] est dans l'eau, elle peut se transporter instantanément vers n'importe quel espace inoccupé dans la même étendue d'eau jusqu'à @[feet 120] de distance. Elle n'a pas besoin de voir la destination pour effectuer ce <strong>Déplacement</strong>.</p>"
+                            "description": "<p>Lorsque la @ref[actor.name]{créature} est dans l'eau, elle peut se transporter instantanément vers n'importe quel espace inoccupé dans la même étendue d'eau jusqu'à @[feet 120] de distance. Elle n'a pas besoin de voir la destination pour effectuer ce <strong>Déplacement</strong>.</p>"
                         }
                     }
                 },
                 "gesturefan000000": {
                     "name": "Signe : Éventail",
-                    "description": "<p>Canalisez l'essence d'une rune en un arc balayant ou éclaté pour frapper plusieurs cibles à proximité immédiate. Utilisé avec la Terre, cela peut projeter une gerbe de pierres en arc de cercle, tandis qu'avec la Kinésie, cela peut trancher plusieurs ennemis d'un coup.</p><p>Le signe Éventail dépend de l'<strong>Intellect</strong> et cible un cône de 120 degrés sur @[feet 6], infligeant 6 dégâts de base en cas d'attaque réussie.</p>"
+                    "description": "<p>Vous façonnez l'essence d'une <strong>Rune</strong> en un arc ample ou fragmenté pour frapper plusieurs cibles à proximité immédiate.</p><p>Le signe <strong>Éventail</strong> est basé sur l'<strong>Intellect</strong> et cible un arc de 120 degrés avec un rayon de <strong>@[feet 6]</strong>. Il inflige <strong>6 dégâts de base</strong> aux cibles qui échouent à résister au sort. Ce signe nécessite <strong>1 Main</strong> pour le lancer et a un coût de base de <strong>3 Action</strong> et <strong>1 Focus</strong>.</p>"
                 },
                 "k0YORkxCqPLxrdNj": {
                     "name": "Armure élémentaire"
@@ -201,7 +221,17 @@
                 },
                 "gestureaspect000": {
                     "name": "Signe : Aspect",
-                    "description": "<p>Vous infusez l'essence d'une Rune dans votre corps, renforçant votre propre forme physique ou psyché.</p><p>Lorsque vous assumez un certain Aspect, vous devenez plus étroitement harmonisé avec le type de dégâts de la Rune utilisée dans votre sort. Vous gagnez <strong>+2 Résistance</strong> à ce type de dégâts, et infligez <strong>+2 Dégâts</strong> supplémentaires lorsque vous infligez des dégâts de ce type.</p><p>Votre Aspect dure <strong>6 Rounds</strong>. Vous ne pouvez avoir qu'un seul Aspect actif, lancer un autre sort utilisant le signe d'Aspect remplace l'effet précédent.</p>"
+                    "description": "<p>Vous infusez l'essence d'une <strong>Rune</strong> dans votre corps, renforçant votre propre forme physique ou psyché.</p><p>Lorsque vous assumez un certain <strong>Aspect</strong>, vous devenez plus étroitement harmonisé avec le type de dégâts de la <strong>Rune</strong> utilisée dans votre sort. Vous gagnez <strong>+2 Résistance</strong> à ce type de dégâts, et infligez <strong>+2 Dégâts</strong> supplémentaires lorsque vous infligez des dégâts de ce type.</p><p>Votre <strong>Aspect</strong> dure <strong>6 Rounds</strong>. Vous ne pouvez avoir qu'un seul <strong>Aspect</strong> actif ; lancer un autre sort utilisant le signe <strong>Aspect</strong> remplace l'effet précédent. Ce signe nécessite <strong>1 Main</strong> pour le lancer et a un coût de base de <strong>2 Action</strong> et <strong>1 Focus</strong>.</p>"
+                },
+                "runeFrost0000000": {
+                    "name": "Rune : Givre",
+                    "description": "<p>La force ordonnée de l'eau et du froid. La Rune de <strong>Givre</strong> gouverne la création d'eau ou d'autres fluides et leur transfert entre les états liquide et gelé.</p><p>La Rune de <strong>Givre</strong> est basée sur la <strong>Sagesse</strong>, cible la <strong>Fortitude</strong>, et inflige des dégâts de <strong>Froid</strong> à la <strong>Santé</strong>. Elle est opposée par la rune chaotique de <strong>Flamme</strong>.</p>",
+                    "actions": {
+                        "condense": {
+                            "name": "Condenser",
+                            "description": "<p>Votre maîtrise de la Rune de Givre vous permet de manipuler les liquides et leurs propriétés thermales, produisant l'un des effets suivants :</p><ul><li><p>Aspirer jusqu'à un litre d'eau douce de l'atmosphère dans un récipient ou sur une surface que vous touchez. L'eau créée peut être affectée par les propriétés atmosphériques dépendantes de votre emplacement actuel.</p></li><li><p>Modifier la température d'un volume d'eau allant jusqu'à 1 gallon (4 L), provoquant un gel ou un dégel immédiat. L'eau n'a pas besoin d'être dans un récipient ; Cette technique peut être utilisée pour recouvrir une surface ou assembler deux objets par congélation. La glace ainsi créée reste gelée aussi longtemps que la température ambiante le permet.</p></li><li><p>Ramasser un cube de neige de @[feet 6] d'arrête environ pour en faire une sculpture, une forme ou un abri solidifié.</p></li></ul><p>Condenser ne peut affecter qu'une créature ou un objet que vous pouvez toucher physiquement. Vous pouvez tenter d'autres utilisations similaires à celles données ci-dessus, leur efficacité étant décidée par le Maître du jeu.</p>"
+                        }
+                    }
                 }
             },
             "archetype": {
@@ -225,7 +255,7 @@
                 },
                 "gesturearrow0000": {
                     "name": "Signe : Flèche",
-                    "description": "<p>Vous apprenez le Signe Flèche, vous permettant de projeter un trait dirigé de puissance arcanique vers une cible lointaine.</p>\n<p>Le Signe Flèche inflige des dégâts correspondant à la Rune utilisée à une cible ennemie unique à portée.</p>"
+                    "description": "<p>Vous lancez un projectile imprégné du pouvoir magique d'une <strong>Rune</strong> sur une cible distante.</p><p>Le signe <strong>Flèche</strong> est basé sur l'<strong>Intellect</strong> et cible une créature unique jusqu'à une distance de <strong>@[feet 60]</strong>, infligeant <strong>8 Dégâts de Base</strong> aux cibles qui échouent à résister au sort. Ce signe nécessite <strong>1 Main</strong> pour le lancer et a un coût de base de <strong>3 Action</strong> et <strong>1 Focus</strong>.</p>"
                 },
                 "electricityAbsor": {
                     "name": "Absorption d'Électricité",
@@ -237,11 +267,17 @@
                 },
                 "gesturefan000000": {
                     "name": "Signe : Éventail",
-                    "description": "<p>Canalisez l'essence d'une rune en un arc balayant ou éclaté pour frapper plusieurs cibles à proximité immédiate. Utilisé avec la Terre, cela peut projeter une gerbe de pierres en arc de cercle, tandis qu'avec la Kinésie, cela peut trancher plusieurs ennemis d'un coup.</p><p>Le signe Éventail dépend de l'<strong>Intellect</strong> et cible un cône de 120 degrés sur @[feet 6], infligeant 6 dégâts de base en cas d'attaque réussie.</p>"
+                    "description": "<p>Vous façonnez l'essence d'une <strong>Rune</strong> en un arc ample ou fragmenté pour frapper plusieurs cibles à proximité immédiate.</p><p>Le signe <strong>Éventail</strong> est basé sur l'<strong>Intellect</strong> et cible un arc de 120 degrés avec un rayon de <strong>@[feet 6]</strong>. Il inflige <strong>6 dégâts de base</strong> aux cibles qui échouent à résister au sort. Ce signe nécessite <strong>1 Main</strong> pour le lancer et a un coût de base de <strong>3 Action</strong> et <strong>1 Focus</strong>.</p>"
                 },
                 "runeStorm0000000": {
                     "name": "Rune : Orage",
-                    "description": "Vous apprenez la rune d'Orage, vous permettant de contrôler des déferlements d'électricité arcanique instables."
+                    "description": "<p>La force chaotique de l'énergie électrique brute. La rune d'<strong>Orage</strong> gouverne les sources de charge et de décharge électrique. </p><p>La rune d'<strong>Orage</strong> est basée sur l'<strong>Intellect</strong>, cible le <strong>Réflexe</strong>, et inflige des dégâts <strong>Électriques</strong> à la <strong>Santé</strong>. Elle est opposée par la rune ordonnée de <strong>Terre</strong>.</p>",
+                    "actions": {
+                        "energize": {
+                            "name": "Dynamiser",
+                            "description": "<p>Votre maîtrise de la Rune d'Orage vous permet de conduire le flux d'air et d'électricité, en manipulant la charge et l'aérodynamisme pour produire l'un des effets suivants :</p><ul><li><p>Imprégner un objet métallique que vous touchez, d'une taille maximale d'un pied cube, d'une charge électromagnétique, ce qui le rendra fortement adhérent à d'autres métaux. Un seul objet peut être chargé de cette manière à la fois, lancer ce sort sur un autre objet entraîne la perte de l'effet magnétique du premier.</p></li><li><p>Rassembler une bourrasque de vent à votre emplacement actuel dans un rayon de six pieds, soufflant soit sous forme de rafale dans une seule direction contrôlée, soit sous forme de cyclone avec une force centripète dans toutes les directions. Les effets aériens dans la zone immédiate sont dispersés et les objets non fixés d'un poids inférieur à 1 livre sont projetés dans la direction de la rafale.</p></li><li><p>Produire le bruit sec d'un coup de tonnerre à un endroit que vous pouvez voir à moins de @[feet 15] de votre position actuelle.</p></li></ul><p>Dynamiser ne peut affecter qu'une créature ou un objet que vous pouvez toucher physiquement. Vous pouvez tenter d'autres utilisations similaires à celles données ci-dessus, leur efficacité étant décidée par le Maître du jeu.</p>"
+                        }
+                    }
                 }
             },
             "archetype": {
@@ -257,13 +293,9 @@
         "RuNh1bFGiHKdHeKI": {
             "name": "Lutin de Flamme",
             "items": {
-                "runeflame0000000": {
-                    "name": "Rune : Flamme",
-                    "description": "Vous apprenez la Rune de Flamme, vous permettant de tisser l'élément arcanique du feu."
-                },
                 "gesturefan000000": {
                     "name": "Signe : Éventail",
-                    "description": "Vous apprenez le signe Éventail, vous permettant de projeter une puissance arcanique dans un arc limité."
+                    "description": "<p>Vous façonnez l'essence d'une <strong>Rune</strong> en un arc ample ou fragmenté pour frapper plusieurs cibles à proximité immédiate.</p><p>Le signe <strong>Éventail</strong> est basé sur l'<strong>Intellect</strong> et cible un arc de 120 degrés avec un rayon de <strong>@[feet 6]</strong>. Il inflige <strong>6 dégâts de base</strong> aux cibles qui échouent à résister au sort. Ce signe nécessite <strong>1 Main</strong> pour le lancer et a un coût de base de <strong>3 Action</strong> et <strong>1 Focus</strong>.</p>"
                 },
                 "vk1SK4IwNZkxQEQL": {
                     "name": "Griffe de Flamme"
@@ -278,6 +310,16 @@
                 "falseAppearance0": {
                     "name": "Faux-semblant",
                     "description": "<p>Tant qu'elle reste immobile, la @ref[actor.name]{créature} est indiscernable d'un autre objet ou matériau.</p>"
+                },
+                "runeFlame0000000": {
+                    "name": "Rune : Flamme",
+                    "description": "<p>La force chaotique de l'énergie élémentaire et thermique. La Rune de <strong>Flamme</strong> gouverne le feu et la chaleur.</p><p>La Rune de <strong>Flamme</strong> est basée sur l'<strong>Intellect</strong>, cible le <strong>Réflexe</strong>, et inflige des dégâts de <strong>Feu</strong> à la <strong>Santé</strong>. Elle est opposée par la rune ordonnée de <strong>Givre</strong>.</p>",
+                    "actions": {
+                        "enkindle": {
+                            "name": "Allumer",
+                            "description": "<p>Votre maîtrise de la Rune de Flamme vous permet de manipuler le feu et les énergies thermales de manière créative, produisant l'un des effets suivants :</p><ul><li><p>Manifester une explosion de flamme élémentaire dans une sphère d'un pouce capable d'enflammer une bougie, une torche ou d'autres matériaux inflammables.</p></li><li><p>Imprégner votre corps d'une protection thermique momentanée qui vous immunise contre les dégâts de feu lors d'une action immédiatement suivante coûtant <strong>1 Action</strong> ou moins.</p></li><li><p>Contrôler le mouvement des flammes dans une petite zone, en les faisant vaciller, danser ou se déplacer en un spectacle animé de lumière et d'ombre.</p></li></ul><p>Allumer ne peut affecter qu'une créature ou un objet que vous pouvez toucher physiquement. Vous pouvez tenter d'autres utilisations similaires à celles données ci-dessus, leur efficacité étant décidée par le Maître du jeu.</p>"
+                        }
+                    }
                 }
             },
             "archetype": {
@@ -293,17 +335,13 @@
         "ugQYiiEmj9idwvqW": {
             "name": "Visiteur de Terre",
             "items": {
-                "runeearth0000000": {
-                    "name": "Rune : Terre",
-                    "description": "<p>La force ordonnée de la terre élémentaire, responsable de la matière physique. La rune de Terre régit la santé et les questions relatives à la croissance biologique. Elle est opposée à la rune chaotique d'Orage.</p>\n<p>La rune de Terre est basée sur la <strong>Sagesse</strong>, cible le <strong>Réflexe</strong>, et inflige des dégâts d'<strong>Acide</strong> à la <strong>Santé</strong>.</p>"
-                },
                 "acidAbsorption00": {
                     "name": "Absorption d'Acide",
                     "description": "<p>La @ref[actor.name]{créature} possède une capacité exceptionnelle à prospérer dans des environnements acides. Sa résistance à l'<strong>Acide</strong> est doublée et si cette résistance réduit une quantité de dégâts en dessous de zéro, le montant négatif est reçu comme <strong>Guérison</strong> à la place.</p>"
                 },
                 "gesturefan000000": {
                     "name": "Signe : Éventail",
-                    "description": "<p>Canalisez l'essence d'une rune en un arc balayant ou éclaté pour frapper plusieurs cibles à proximité immédiate. Utilisé avec la Terre, cela peut projeter une gerbe de pierres en arc de cercle, tandis qu'avec la Kinésie, cela peut trancher plusieurs ennemis d'un coup.</p><p>Le signe Éventail dépend de l'<strong>Intellect</strong> et cible un cône de 120 degrés sur @[feet 6], infligeant 6 dégâts de base en cas d'attaque réussie.</p>"
+                    "description": "<p>Vous façonnez l'essence d'une <strong>Rune</strong> en un arc ample ou fragmenté pour frapper plusieurs cibles à proximité immédiate.</p><p>Le signe <strong>Éventail</strong> est basé sur l'<strong>Intellect</strong> et cible un arc de 120 degrés avec un rayon de <strong>@[feet 6]</strong>. Il inflige <strong>6 dégâts de base</strong> aux cibles qui échouent à résister au sort. Ce signe nécessite <strong>1 Main</strong> pour le lancer et a un coût de base de <strong>3 Action</strong> et <strong>1 Focus</strong>.</p>"
                 },
                 "70JmOia6MhgONfpq": {
                     "name": "Griffe de Terre"
@@ -313,7 +351,29 @@
                 },
                 "gestureaspect000": {
                     "name": "Signe : Aspect",
-                    "description": "<p>Vous infusez l'essence d'une Rune dans votre corps, renforçant votre propre forme physique ou psyché.</p><p>Lorsque vous assumez un certain Aspect, vous devenez plus étroitement harmonisé avec le type de dégâts de la Rune utilisée dans votre sort. Vous gagnez <strong>+2 Résistance</strong> à ce type de dégâts, et infligez <strong>+2 Dégâts</strong> supplémentaires lorsque vous infligez des dégâts de ce type.</p><p>Votre Aspect dure <strong>6 Rounds</strong>. Vous ne pouvez avoir qu'un seul Aspect actif, lancer un autre sort utilisant le signe d'Aspect remplace l'effet précédent.</p>"
+                    "description": "<p>Vous infusez l'essence d'une <strong>Rune</strong> dans votre corps, renforçant votre propre forme physique ou psyché.</p><p>Lorsque vous assumez un certain <strong>Aspect</strong>, vous devenez plus étroitement harmonisé avec le type de dégâts de la <strong>Rune</strong> utilisée dans votre sort. Vous gagnez <strong>+2 Résistance</strong> à ce type de dégâts, et infligez <strong>+2 Dégâts</strong> supplémentaires lorsque vous infligez des dégâts de ce type.</p><p>Votre <strong>Aspect</strong> dure <strong>6 Rounds</strong>. Vous ne pouvez avoir qu'un seul <strong>Aspect</strong> actif ; lancer un autre sort utilisant le signe <strong>Aspect</strong> remplace l'effet précédent. Ce signe nécessite <strong>1 Main</strong> pour le lancer et a un coût de base de <strong>2 Action</strong> et <strong>1 Focus</strong>.</p>"
+                },
+                "runeEarth0000000": {
+                    "name": "Rune : Terre",
+                    "description": "<p>La force ordonnée de la terre élémentaire, responsable de la matière physique. La Rune de <strong>Terre</strong> gouverne les minéraux, les métaux, les sols et autres composés physiques.</p><p>La Rune de <strong>Terre</strong> est basée sur la <strong>Sagesse</strong>, cible le <strong>Réflexe</strong>, et inflige des dégâts d'<strong>Acide</strong> à la <strong>Santé</strong>. Elle est opposée par la rune chaotique d'<strong>Orage</strong>.</p>",
+                    "actions": {
+                        "mould": {
+                            "name": "Façonner",
+                            "description": "<p>La maîtrise de la Rune de Terre vous permet de manipuler les forces brutes de la roche, des minéraux, et de la terre de manière fondamentale, produisant l'un des effets suivants :</p><ul><li><p>Façonner rapidement jusqu'à @[feet 1] cube de matériau disponible en une forme géométrique simple comme un cuboïde, un ellipsoïde ou un polyèdre.</p></li><li><p>Copier avec précision un objet tenu en main plus petit qu'un cube de 6 pouces d'arrête, à partir d'argile, de pierre ou de métal. La réplique ne conserve aucune propriété utile, hormis sa forme physique.</p></li><li><p>Séparer et recueillir les particules de terre de la surface d'un objet, d'une créature ou d'un liquide que vous touchez, purifiant ainsi complètement le sujet en quelques instants.</p></li></ul><p>Façonner ne peut affecter qu'une créature ou un objet que vous pouvez toucher physiquement. Vous pouvez tenter d'autres utilisations similaires à celles données ci-dessus, leur efficacité étant décidée par le Maître du jeu.</p>"
+                        }
+                    }
+                },
+                "causticLimb00000": {
+                    "name": "Membre caustique",
+                    "description": {
+                        "public": "<p>La @ref[actor.name]{créature} frappe avec un membre dégoulinant d'ichor corrosif.</p>"
+                    }
+                },
+                "stoneSkin0000000": {
+                    "name": "Peau de pierre",
+                    "description": {
+                        "public": "<p>La @ref[actor.name]{créature} possède une peau rugueuse semblable à la roche.</p>"
+                    }
                 }
             },
             "archetype": {
@@ -335,13 +395,9 @@
                 "Qu8kL7eiBNkcOXpn": {
                     "name": "Griffe de Terre"
                 },
-                "runeearth0000000": {
-                    "name": "Rune : Terre",
-                    "description": "Vous apprenez la Rune de Terre, vous permettant de contrôler les forces tectoniques et corrosives."
-                },
                 "gestureray000000": {
                     "name": "Signe : Rayon",
-                    "description": "Vous apprenez le Signe Rayon, vous permettant de manifester de l'énergie arcanique en une ligne concentrée."
+                    "description": "<p>Vous canalisez la puissance arcanique d'une <strong>Rune</strong> en un point et la projetez vers l'extérieur en un faisceau.</p><p>Le signe <strong>Rayon</strong> est basé sur la <strong>Sagesse</strong> et produit une ligne de @[feet 1] de large et @[feet 30] de long partant du lanceur, infligeant <strong>6 Dégâts de Base</strong> aux cibles qui échouent à résister au sort. Le signe nécessite <strong>1 Main</strong> pour le lancer et a un coût de base de <strong>4 Action</strong> et <strong>1 Focus</strong>.</p>"
                 },
                 "acidAbsorption00": {
                     "name": "Absorption d'Acide",
@@ -353,7 +409,29 @@
                 },
                 "gesturefan000000": {
                     "name": "Signe : Éventail",
-                    "description": "<p>Canalisez l'essence d'une rune en un arc balayant ou éclaté pour frapper plusieurs cibles à proximité immédiate. Utilisé avec la Terre, cela peut projeter une gerbe de pierres en arc de cercle, tandis qu'avec la Kinésie, cela peut trancher plusieurs ennemis d'un coup.</p><p>Le signe Éventail dépend de l'<strong>Intellect</strong> et cible un cône de 120 degrés sur @[feet 6], infligeant 6 dégâts de base en cas d'attaque réussie.</p>"
+                    "description": "<p>Vous façonnez l'essence d'une <strong>Rune</strong> en un arc ample ou fragmenté pour frapper plusieurs cibles à proximité immédiate.</p><p>Le signe <strong>Éventail</strong> est basé sur l'<strong>Intellect</strong> et cible un arc de 120 degrés avec un rayon de <strong>@[feet 6]</strong>. Il inflige <strong>6 dégâts de base</strong> aux cibles qui échouent à résister au sort. Ce signe nécessite <strong>1 Main</strong> pour le lancer et a un coût de base de <strong>3 Action</strong> et <strong>1 Focus</strong>.</p>"
+                },
+                "runeEarth0000000": {
+                    "name": "Rune : Terre",
+                    "description": "<p>La force ordonnée de la terre élémentaire, responsable de la matière physique. La Rune de <strong>Terre</strong> gouverne les minéraux, les métaux, les sols et autres composés physiques.</p><p>La Rune de <strong>Terre</strong> est basée sur la <strong>Sagesse</strong>, cible le <strong>Réflexe</strong>, et inflige des dégâts d'<strong>Acide</strong> à la <strong>Santé</strong>. Elle est opposée par la rune chaotique d'<strong>Orage</strong>.</p>",
+                    "actions": {
+                        "mould": {
+                            "name": "Façonner",
+                            "description": "<p>La maîtrise de la Rune de Terre vous permet de manipuler les forces brutes de la roche, des minéraux, et de la terre de manière fondamentale, produisant l'un des effets suivants :</p><ul><li><p>Façonner rapidement jusqu'à @[feet 1] cube de matériau disponible en une forme géométrique simple comme un cuboïde, un ellipsoïde ou un polyèdre.</p></li><li><p>Copier avec précision un objet tenu en main plus petit qu'un cube de 6 pouces d'arrête, à partir d'argile, de pierre ou de métal. La réplique ne conserve aucune propriété utile, hormis sa forme physique.</p></li><li><p>Séparer et recueillir les particules de terre de la surface d'un objet, d'une créature ou d'un liquide que vous touchez, purifiant ainsi complètement le sujet en quelques instants.</p></li></ul><p>Façonner ne peut affecter qu'une créature ou un objet que vous pouvez toucher physiquement. Vous pouvez tenter d'autres utilisations similaires à celles données ci-dessus, leur efficacité étant décidée par le Maître du jeu.</p>"
+                        }
+                    }
+                },
+                "causticLimb00000": {
+                    "name": "Membre caustique",
+                    "description": {
+                        "public": "<p>La @ref[actor.name]{créature} frappe avec un membre dégoulinant d'ichor corrosif.</p>"
+                    }
+                },
+                "stoneSkin0000000": {
+                    "name": "Peau de pierre",
+                    "description": {
+                        "public": "<p>La @ref[actor.name]{créature} possède une peau rugueuse semblable à la roche.</p>"
+                    }
                 }
             },
             "archetype": {
