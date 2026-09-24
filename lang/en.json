@@ -1633,6 +1633,7 @@
     "WoundsShort": "Healing"
   },
   "DETECTION_MODES": {
+    "BloodSense": "Blood Sense",
     "Echolocation": "Echolocation",
     "SenseCreature": "Sense Creature",
     "ThermalVision": "Thermal Vision"
@@ -1994,7 +1995,7 @@
           "label": "Frequency"
         },
         "origin": {
-          "hint": "The effect responsible for tracking the existence of this behavior. If present, determines which tokens should actually trigger an Action based on the originating action's targeting configuration.",
+          "hint": "The effect responsible for tracking the existence of this behavior.",
           "label": "Origin"
         }
       },
