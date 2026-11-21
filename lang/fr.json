@@ -22,8 +22,8 @@
             "Intellect": "<p>L'intellect est un attribut de vivacité d'esprit qui reflète la rapidité de la pensée et la détermination dans l'action. L'Intellect affecte l'<strong>Initiative</strong>, la défense de <strong>Réflexe</strong>, et la taille de la réserve de <strong>Focus</strong>.</p>",
             "Presence": "<p>La Présence est un attribut de résilience mentale qui décrit la force de personnalité, la détermination et la confiance en soi d'une créature. La Présence affecte la défense de <strong>Volonté</strong> et la taille de la réserve de <strong>Focus</strong>. Chaque point de Présence augmente la base de <strong>Moral</strong> de 4.</p>",
             "Strength": "<p>La Force est une caractéristique de puissance physique qui décrit la vigueur, la robustesse et la puissance d'une créature. La Force affecte la défense de <strong>Fortitude</strong>, la <strong>Capacité</strong> de charge, et l'utilisation des armes basées sur la Force. Chaque point de Force augmente la base de <strong>Santé</strong> de 2.</p>",
-            "Toughness": "<p>La Robustesse est un attribut de résilience physique qui désigne la vigueur et la ténacité. La Robustesse affecte la défense de <strong>Fortitude</strong>. Chaque point de Robustesse augmente la base de <strong>Santé</strong> de 4.</p>",
-            "Wisdom": "<p>La Sagesse est une caractéristique de puissance mentale qui décrit la force de conviction, l'étendue des connaissances et la patience d'une créature. La Sagesse affecte la défense de <strong>Volonté</strong> et la taille de la réserve de <strong>Focus</strong>. Chaque point de Sagesse augmente la base de <strong>Moral</strong> de 2.</p>"
+            "Toughness": "<p>La Robustesse est un attribut de résilience physique qui désigne la vigueur et la ténacité. La Robustesse affecte la défense de <strong>Volonté</strong>. Chaque point de Robustesse augmente la base de <strong>Santé</strong> de 4.</p>",
+            "Wisdom": "<p>La Sagesse est une caractéristique de puissance mentale qui décrit la force de conviction, l'étendue des connaissances et la patience d'une créature. La Sagesse affecte la défense de <strong>Fortitude</strong> et la taille de la réserve de <strong>Focus</strong>. Chaque point de Sagesse augmente la base de <strong>Moral</strong> de 2.</p>"
         }
     },
     "ACCESSORY": {
@@ -79,7 +79,7 @@
                 "Name": "Rechargement d'arme"
             },
             "Rest": {
-                "Description": "Consacrez dix heures à un repos complet, incluant le temps de manger, de dormir, de soigner vos blessures et de récupérer vos ressources. Cela apporte tous les bénéfices d'une <strong>Récupération</strong>, et les Héros réduisent leurs <strong>Lésions</strong> et <strong>Folie</strong> de leur <strong>Niveau</strong>de personnage. Les effets temporaires de longue durée se terminent également.",
+                "Description": "Consacrez dix heures à un repos complet, incluant le temps de manger, de dormir, de soigner vos blessures et de récupérer vos ressources. Cela apporte tous les bénéfices d'une <strong>Récupération</strong>, et les personnages souffrant de <strong>Lésions</strong> et de <strong>Folie</strong> les réduisent de leur <strong>Niveau</strong>. Les effets temporaires de longue durée se terminent également.",
                 "Name": "Repos"
             },
             "Strike": {
@@ -108,6 +108,14 @@
                 "Description": "Interagissez avec un objet de votre environnement, comme ouvrir une porte, actionner un levier, ou attraper un objet. Si votre @Rule[movement.freeMovement] pour le round est toujours disponible, ce dernier est dépensé à la place du coût de l'@Rule[resource.action].",
                 "Name": "Interagir",
                 "OpenDoor": "Ouvrir la porte"
+            },
+            "Convalesce": {
+                "Description": "Vous consacrez votre repos à soigner vos blessures. Retirez 1 <strong>Lésion</strong> supplémentaire lorsque vous faites un <strong>Repos</strong>.",
+                "Name": "Rétablissement"
+            },
+            "Meditate": {
+                "Description": "Vous consacrez votre repos à apaiser votre esprit. Retirez 1 <strong>Folie</strong> supplémentaire lorsque vous faites un <strong>Repos</strong>.",
+                "Name": "Méditation"
             }
         },
         "EFFECT_RESULT_TYPES": {
@@ -392,15 +400,23 @@
             "VocalTooltip": "Cette action requiert que l'utilisateur parle ou émette un son d'une autre manière.",
             "Weakened": "Affaibli",
             "WeakenedTooltip": "Cette action est plus faible que les attaques normales et applique un malus de dégâts de -6.",
-            "Rest": "Après repos",
-            "RestTooltip": "Cette action ne peut être effectuée qu'immédiatement après la confirmation d'une action de Repos, et une seule action de ce type peut suivre chaque Repos.",
+            "Rest": "En repos",
+            "RestTooltip": "Cette action est effectuée dans le cadre d’un Repos. Chaque personnage peut réaliser une telle action durant un Repos de groupe, ou immédiatement après avoir confirmé son propre Repos.",
             "Keen": "Aiguisée",
             "KeenTooltip": "Cette action est précise, abaissant son seuil de Réussite critique de 2 et augmentant ainsi la probabilité d'un Coup critique.",
             "CostMorale": "{morale}PM",
             "Subtle": "Subtil",
             "SubtleTooltip": "Cette action est généralement imperceptible, préservant la discrétion et l'invisibilité lors de son utilisation.",
             "Strike": "Frappe",
-            "StrikeTooltip": "Cette action effectue une ou plusieurs Frappes utilisant une arme équipée. Toute action consistant à attaquer avec une arme tenue en main est une Frappe, et pas seulement l'action de Frappe de base."
+            "StrikeTooltip": "Cette action effectue une ou plusieurs Frappes utilisant une arme équipée. Toute action consistant à attaquer avec une arme tenue en main est une Frappe, et pas seulement l'action de Frappe de base.",
+            "Party": "Groupe",
+            "PartyTooltip": "Cette action nécessite d’être membre du groupe actif.",
+            "Involuntary": "Involontaire",
+            "InvoluntaryTooltip": "Cette action affecte une créature plutôt que d'être choisie, elle se produit donc même lorsque la créature est Neutralisée.",
+            "Irreversible": "Irréversible",
+            "IrreversibleTooltip": "Cette action est irréversible une fois confirmée, elle doit être confirmée manuellement par un Maître du jeu.",
+            "QualityDuration": "Durée évolutive",
+            "QualityDurationTooltip": "La durée des effets de cette action varie en fonction de la qualité de l'objet associé."
         },
         "TAG_CATEGORIES": {
             "Attack": "Attaque",
@@ -442,7 +458,8 @@
             "Self": "Soi-même",
             "Single": "Sélectif",
             "Summon": "Invocation",
-            "Wall": "Mur"
+            "Wall": "Mur",
+            "Party": "Groupe"
         },
         "WARNINGS": {
             "AuraNoToken": "Vous ne pouvez pas utiliser une action de type émanation personnelle sans qu'il y ait un token sur la scène !",
@@ -457,7 +474,6 @@
                 "other": "{name} doit avoir {hands} mains de libre pour utiliser {action} !"
             },
             "CannotAffordMove": "{name} n'a pas suffisamment d'action pour se déplacer de cette distance qui nécessite {cost}A !",
-            "CannotSpendAction": "{name} ne peut pas dépenser d'Action en étant Neutralisé !",
             "CannotSpendFocus": "{name} ne peut pas dépenser de Focus en étant actuellement {status} !",
             "CannotTargetSelf": "Vous ne pouvez pas vous cibler vous-même avec cette Action !",
             "CannotThrow": "Vous ne pouvez pas lancer cette arme.",
@@ -530,7 +546,12 @@
             "PassThroughMaxOne": "Vous pouvez vous déplacer à travers l'espace d'une seule autre créature.",
             "CannotConfirmTarget": "Impossible de {change} l'action {action} tant que l'action à laquelle elle répond est {state}.",
             "InteractRange": "Vous êtes trop éloigné pour interagir avec cet objet.",
-            "NotYourTurn": "Vous ne pouvez utiliser l'action {action} que lors de votre propre tour de combat."
+            "NotYourTurn": "Vous ne pouvez utiliser l'action {action} que lors de votre propre tour de combat.",
+            "MustUseRestCard": "Un repos de groupe est en cours ; effectuez l’action {action} depuis sa carte de discussion.",
+            "CannotReverse": "L'action {action} est irréversible et ne peut être annulée une fois confirmée.",
+            "CyclicEffects": "L'action {action} ne peut pas créer des effets qui dépendent les uns des autres au sein d’un cycle.",
+            "Incapacitated": "{name} ne peut pas agir tant qu’il est Neutralisé.",
+            "TargetTooSmall": "La cible « {target} » est trop petite pour {action}."
         },
         "Action": "Action",
         "AffectsScope": "Affecte {scope}",
@@ -572,7 +593,9 @@
             "hooks": "Hooks",
             "target": "Cible",
             "usage": "Utilisation"
-        }
+        },
+        "Reversed": "Inversée",
+        "SummonsFolder": "Invocations"
     },
     "ACTIVE_EFFECT": {
         "ACTIONS": {
@@ -643,7 +666,8 @@
         },
         "WARNINGS": {
             "ReferenceNotDeleted": "Il est possible de supprimer \"{name}\" mais pas automatiquement. Veuillez le supprimer manuellement si nécessaire."
-        }
+        },
+        "ContextName": "{effect} ({context})"
     },
     "ACTOR": {
         "ACTIONS": {
@@ -674,7 +698,8 @@
             "SyncActorContent": "<p>Réappliquez les Talents, l'Ascendance, l'Origine, la Taxonomie et l'Archétype de cet acteur à partir de leurs versions actuelles dans le compendium.</p><p><strong>Toute personnalisation apportée à ces éléments sur cet Acteur sera écrasée par les valeurs par défaut du compendium.</strong> Les Talents, l'équipement et les sorts octroyés que les sources ne fournissent plus seront supprimés.</p>",
             "SyncActorTitle": "Synchronisez depuis le Compendium : {actor}",
             "SyncActorUnresolved": "Aucune source de compendium trouvée pour les {details} de l'acteur {actor}. Ils seront laissés inchangés.",
-            "SyncActorResult": "{actor} synchronisé : Talents rafraîchis {synced}, supprimés {deleted}, objets réappliqués {details}."
+            "SyncActorResult": "{actor} synchronisé : Talents rafraîchis {synced}, supprimés {deleted}, objets réappliqués {details}.",
+            "SplitCurrency": "Partager la monnaie au groupe"
         },
         "ADVERSARY": {
             "ACTIONS": {
@@ -854,12 +879,43 @@
                     "participants": {
                         "label": "Personnages au repos",
                         "hint": "Chaque personnage sélectionné effectuera l'action Repos."
+                    },
+                    "allowRestActions": {
+                        "label": "Autoriser les actions de repos",
+                        "hint": "Si cette option est cochée, chaque personnage peut effectuer une action de repos dans le cadre de son repos."
+                    },
+                    "designation": {
+                        "label": "Action de repos",
+                        "hint": "L'action de repos que ce personnage tentera d'effectuer durant le repos."
                     }
                 },
                 "Confirm": "Commencer le repos",
                 "ContinuationHint": "Ce repos est la poursuite d'un repos précédent ayant été interrompu. {hoursCompleted} sur {hoursRequired} heures ont été effectuées.",
                 "Interrupted": "Votre repos a été interrompu après {hours} heures !",
-                "Title": "Confirmer le repos du groupe"
+                "Title": "Confirmer le repos du groupe",
+                "STATUSES": {
+                    "Cancelled": "Annulé",
+                    "Complete": "Terminer",
+                    "Interrupted": "Interrompu",
+                    "Planning": "Plannification",
+                    "Ready": "Prêt",
+                    "Rolling": "Jet de dés"
+                },
+                "CardTitle": "{name} se repose ({hours} Heures)",
+                "ConfirmRest": "Confirmer le repos",
+                "NoChanges": "Aucune récupération n’est nécessaire",
+                "WARNINGS": {
+                    "NoGM": "Un maître du jeu doit être connecté pour désigner une action de repos."
+                },
+                "Abstain": "Aucune action de repos",
+                "Designate": "Choisissez une action de repos",
+                "DesignateTitle": "{name} : Action de repos",
+                "HideResult": "Masquer le résultat",
+                "Perform": "Effectuer une action de repos",
+                "Resolved": "Action de repos effectuée",
+                "ReturnToPlanning": "Revenir à la planification",
+                "ShowResult": "Montrer le résultat",
+                "Undecided": "Incertain"
             },
             "WARNINGS": {
                 "NoAddSelf": "Vous ne pouvez pas ajouter votre propre groupe !",
@@ -944,7 +1000,8 @@
                 "EffectsDisabled": "Effets désactivés",
                 "EffectsPersistent": "Effets persistants",
                 "EffectsSuppressed": "Effets supprimés",
-                "EffectsTemporary": "Effets temporaires"
+                "EffectsTemporary": "Effets temporaires",
+                "ActionsRest": "Actions de repos"
             },
             "Abilities": "Caractéristiques",
             "AbilityPoints": "Points de caractéristique",
@@ -1017,7 +1074,7 @@
             },
             "itemTypes": {
                 "label": "Types d'objet",
-                "hint": "Types d'objets auxquels cet affixe peut être appliqué. Si aucun type spécifique n'est coché, tous les types d'objets sont autorisés."
+                "hint": "Types ou catégories d'objets auxquels cet affixe peut être appliqué. Un objet est retenu s’il correspond à l’une des sélections. Si rien n'est sélectionné, tous les types d'objets sont autorisés."
             },
             "tier": {
                 "label": "Palier",
@@ -1053,8 +1110,10 @@
         },
         "CursedName": "Maudit {name}",
         "SUPPRESSION": {
-            "Duplicate": "Remplacé par une autre occurrence du même affixe"
-        }
+            "Duplicate": "Remplacé par une autre occurrence du même affixe",
+            "Broken": "Supprimé lorsque l'objet est cassé"
+        },
+        "ItemTypeAny": "Tous {type}"
     },
     "ADVANCEMENT": {
         "ExpectedLevel": "Niveau attendu",
@@ -1285,10 +1344,10 @@
                 "Label": "Monnaie",
                 "Total": "Total"
             },
-            "Cost": "Coût de {award} payé par :",
-            "CostSplit": "Coût de {award} partagé entre :",
-            "Reward": "{award} accordé à :",
-            "RewardSplit": "{award} partagé entre :"
+            "Cost": "Coût payé",
+            "CostSplit": "Coût partagé",
+            "Reward": "Récompense accordée",
+            "RewardSplit": "Récompense partagée"
         },
         "TOOLTIPS": {
             "Currency": "Attribuer de la Monnaie",
@@ -1422,9 +1481,11 @@
             "Magical": "Magique",
             "MagicalTooltip": "Cet effet est de nature magique et peut être annulé par des pouvoirs anti-magie.",
             "Maintained": "Maintenu",
-            "MaintainedTooltip": "Cet effet prend fin à la fin de votre tour, à moins que vous ne dépensiez du Focus pour le maintenir.",
+            "MaintainedTooltip": "Cet effet prend fin à la fin de votre tour, à moins que vous ne le mainteniez.",
             "Removable": "Révocable",
-            "RemovableTooltip": "Cet effet peut être supprimé en surmontant la difficulté de suppression."
+            "RemovableTooltip": "Cet effet peut être supprimé en surmontant la difficulté de suppression.",
+            "Deployed": "Déployé",
+            "DeployedTooltip": "Cet effet existe parce que l’objet dont il provient a été lâché, placé ou lancé. Récupérer cet objet met fin à l’effet."
         },
         "SECTIONS": {
             "Removal": "Suppression",
@@ -1436,11 +1497,13 @@
             "DeleteDoT": "Enlever des Dégâts sur la durée",
             "Maintain": "Maintenir",
             "MaintainCost": "Maintenir ({cost} Focus)",
-            "MaintainDetail": "Dépenser du Focus pour maintenir {effect}.",
+            "MaintainDetail": "Continuer à maintenir l'effet {effect}.",
             "MaintainName": "Maintenir {effect}"
         },
         "SUPPRESSION": {
-            "Maintenance": "Nécessite d'être maintenu"
+            "Maintenance": "Nécessite d'être maintenu",
+            "Incapacitated": "Supprimé en étant Neutralisé",
+            "Source": "Supprimé tant que la source est inactive"
         },
         "MAINTENANCE": {
             "EndConfirm": "Le maintien de {effect} mettra fin à {effects}, que vous ne pouvez plus maintenir.",
@@ -1564,7 +1627,8 @@
         "Scaled": "Évolué",
         "Scaling": "Évolution",
         "Syncing": "Synchronisation des Talents & Sorts",
-        "SendChatReadaloud": "Envoyer dans la discution"
+        "SendChatReadaloud": "Envoyer dans la discution",
+        "Parenthetical": "{label} ({detail})"
     },
     "CURRENCY_DENOMINATIONS": {
         "CP": {
@@ -1770,7 +1834,8 @@
         "TooltipDamage": "{rank} contre {defense} infligeant {damage} points de dégâts à : {resource}",
         "TooltipRestoration": "{rank} contre {defense} restaurant la ressource : {resource}",
         "TooltipTag": "{label} : {tooltip}",
-        "TooltipTags": "{tooltip} ({tags})"
+        "TooltipTags": "{tooltip} ({tags})",
+        "EnvironmentTalent": "Environnement omniscient"
     },
     "ITEM": {
         "ACTIONS": {
@@ -1910,7 +1975,8 @@
             "Quality": "Palier de Qualité",
             "QualityAny": "N'importe lequel",
             "Generate": "Générer",
-            "GMOnly": "Seul un Maître du jeu peut générer des objets aléatoires."
+            "GMOnly": "Seul un Maître du jeu peut générer des objets aléatoires.",
+            "ItemTypesHint": "Limitez les objets de base à ces types ou catégories. Si rien n’est sélectionné, alors tout objet pouvant être enchanté est autorisé."
         },
         "EnchantmentLegendary": "Légendaire",
         "EnchantmentMajor": "Majeur",
@@ -2036,7 +2102,8 @@
             "FREQUENCIES": {
                 "every": "À chaque fois",
                 "once": "Une fois",
-                "roundActor": "Une fois par Round par Acteur"
+                "roundActor": "Une fois par Round par Acteur",
+                "oncePerActor": "Une fois par Acteur"
             },
             "TABS": {
                 "action": "Action",
@@ -2841,6 +2908,9 @@
         "RegionBehavior": {
             "crucible.hazard": "Crucible Péril",
             "crucible.action": "Action de Crucible"
+        },
+        "ChatMessage": {
+            "rest": "Repos de groupe"
         }
     },
     "WALKTHROUGH": {
@@ -2939,7 +3009,7 @@
             "Title": "Amplifier l'affixe"
         },
         "FieldStudy": {
-            "Effect": "Domaine d'étude : {knowledge}",
+            "Effect": "Domaine d'étude",
             "Label": "Sujet d'étude",
             "Required": "Vous devez choisir un domaine de Connaissances à étudier.",
             "Title": "Domaine d'étude"
@@ -2960,8 +3030,7 @@
         },
         "Grapple": {
             "AlreadyGrappled": "{name} est déjà Agrippé par une autre créature.",
-            "AlreadyGrappling": "Vous Agrippez déjà une autre créature.",
-            "TooLarge": "{name} est trop imposant pour que vous l'agrippiez."
+            "AlreadyGrappling": "Vous Agrippez déjà une autre créature."
         },
         "Throw": {
             "NotGrappling": "Vous ne pouvez Lancer qu'une créature que vous Agrippez."
@@ -2975,9 +3044,9 @@
         },
         "Gambit": {
             "AnteWon": "Gambit (+{count})",
-            "Charges": "Gambit ({count})",
             "ChargeDescription": "Un nombre de charges de Gambit qui doivent être dépensées à la place de l'<strong>Héroïsme</strong> pour effectuer votre action \"Tapis\".",
-            "LoadedDice": "Dés chargés"
+            "LoadedDice": "Dés chargés",
+            "Name": "Gambit"
         },
         "Swallow": {
             "AlreadySwallowing": "Vous êtes déjà en train d'avaler une autre créature."
@@ -2986,11 +3055,10 @@
             "CannotUse": "{name} ne peut entrer en Fureur immortelle que tant que sa Santé ne dépasse pas ses Lésions."
         },
         "Grudgebearer": {
-            "Grudge": "Rancune : {target}"
+            "Grudge": "Rancune"
         },
         "VowOfAnimus": {
-            "VowDescription": "Vous prêtez serment de vaincre un ennemi spécifique qui devient le sujet de votre animosité.",
-            "VowName": "Serment solennel : {target}"
+            "VowDescription": "Vous prêtez serment de vaincre un ennemi spécifique qui devient le sujet de votre animosité."
         },
         "Beastmaster": {
             "AlreadyBonded": "Vous avez déjà un compagnon lié.",
@@ -3013,6 +3081,16 @@
         },
         "Revive": {
             "RequiresDead": "Ranimer nécessite une cible morte."
+        },
+        "ThrowTorch": {
+            "LightName": "Torche lancée ({actor})"
+        },
+        "PetrifyingCloud": {
+            "Petrification": "Pétrification",
+            "Stage": "Stade {stage}"
+        },
+        "Regurgitate": {
+            "NotHeld": "Vous ne tenez pas {target}."
         }
     },
     "TRAINING": {
@@ -3114,6 +3192,10 @@
             "materialVolume": {
                 "hint": "Le matériau occupe toute la plage d’altitude de la région, à l’instar d’une masse d’eau, plutôt que de se limiter à ses seules surfaces.",
                 "label": "Le matériau remplit le volume"
+            },
+            "materialPriority": {
+                "hint": "Lorsque des Régions matérielles se chevauchent, la priorité la plus élevée l’emporte. Appliquer cette priorité uniquement sur une petite Région d’accentuation placée au-dessus d’une Région de base plus étendue.",
+                "label": "Priorité matérielle"
             }
         },
         "Legend": "Bruits de pas",
